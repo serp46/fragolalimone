@@ -1,0 +1,28 @@
+gelato_homepage:
+    path:     /
+    defaults: { _controller: GelatoBundle:Default:index }
+
+
+gelato_profilo_utente:
+    path:     /utente
+    defaults: { _controller: GelatoBundle:Default:utente }
+
+gelato_profilo_amministratore:
+    path:     /amministratore
+    defaults: { _controller: GelatoBundle:Default:amministratore }
+
+gelato_contatti:
+    path:     /contatti
+    defaults: { _controller: GelatoBundle:Default:contatti }
+
+gelato_risultati:
+    path:     /risultati
+    defaults: { _controller: GelatoBundle:Default:risultati }
+
+gelato_risultatiroot:
+        path:     /risultatiroot
+        defaults: { _controller: GelatoBundle:Default:risultatiroot }
+
+gelato_registrazione:
+        path:     /registrazione
+        defaults: { _controller: GelatoBundle:Default:registrazione }

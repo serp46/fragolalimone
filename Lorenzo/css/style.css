@@ -1,0 +1,666 @@
+/* ----------------------- HEADER ------------------------- */
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+
+.sfondo1 {
+  background: url('../img/ice-cream.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Shadows Into Light', cursive;
+  color: #fff;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: normal;
+
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+div {
+  border-radius: 10px;
+}
+
+@font-face {
+  font-family: pacifico;
+  src: url('../Font/pacifico.ttf');
+}
+
+.navbar {
+  height: 60px;
+  margin-bottom: 35px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navigation {
+  display: block;
+  text-align: center;
+}
+
+.logo {
+  display: inline-block;
+  height: 50px;
+  width: 60%;
+  margin-top: 5px;
+}
+
+.logo img {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.left {
+  width: 150px;
+  display: inline-block;
+  position: relative;
+  top: -12px;
+}
+
+.left a {
+  text-decoration: lowercase;
+  font-size: 2em;
+  font-family: pacifico;
+}
+
+.left a:hover {
+  font-size: 2.2em;
+}
+
+.right {
+  width: 150px;
+  display: inline-block;
+  position: relative;
+  top: -12px;
+}
+
+.right a {
+    text-decoration: lowercase;
+    font-size: 2em;
+    font-family: pacifico;
+}
+
+.right a:hover {
+    font-size: 2.2em;
+}
+
+.nav a {
+  text-decoration: none;
+  display: inline;
+}
+
+/* ----------------------- HOME ------------------------- */
+
+.box {
+  bottom: 25px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 50vw;
+  height: 660px;
+  margin: auto;
+  text-align: center;
+  border-radius: 10px;
+  padding-top: 20px;
+  margin-bottom: 35px;
+}
+
+.home_payoff {
+  text-align: center;
+  font-size: 2.5em;
+  height: auto;
+  padding-top: 35px;
+}
+
+.brand {
+  margin: auto;
+  border: 5px solid white;
+  border-radius: 10px;
+  width: 40%;
+  height: auto;
+  text-align: center;
+}
+
+.brand img {
+  width: 100%;
+  height: auto;
+}
+
+.Button {
+  margin: auto;
+  width: 40vw;
+  height: auto;
+}
+
+.Button label {
+  font-size: 1.5em;
+}
+
+.home_form {
+  margin: 20px auto;
+  text-align: center;
+  width: 40vw;
+  height: auto;
+  line-height: 30px;
+}
+
+.home_gusti {
+  width: 100px;
+  height: auto;
+  background-color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 1em;
+}
+
+.home_cerca {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: auto;
+  display: block;
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5em;
+  position: relative;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-style: none;
+}
+
+
+
+.login {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: auto;
+  display: inline-block;
+  width: 70px;
+  height: 50px;
+  border-radius: 10px;
+  font-size: 1.5em;
+  padding-top: 10px;
+  position: relative;
+  top: 10px;
+}
+
+/* ----------------------- CONTATTI ------------------------- */
+
+.contatti {
+  width: 40%;
+  height: 30%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+  line-height: 35px;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.contatti ul li {
+  list-style: none;
+  font-size: 1rem;
+  color: white;
+  padding: 10px;
+}
+
+.titolo_contatti {
+  margin-top: 80px;
+  font-size: 2em;
+}
+
+/* ----------------------- REGISTRAZIONE ------------------------- */
+
+.compilazione {
+  margin: auto;
+  display: inline-block;
+  width: 25vw;
+  height: 7vh;
+}
+
+.registrazione_payoff {
+  display: inline-block;
+  font-size: 1.8em;
+  margin-bottom: 25px;
+}
+
+.registrazione {
+  margin-top: 25px;
+}
+
+.registrazione_input {
+  margin: auto;
+  border-radius: 5px;
+  width: 12.5vw;
+  height: 3vh;
+  color: black;
+  font-size: 1em;
+}
+
+.registrazione_Button  {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 10px auto;
+  width: 17vw;
+  height: 7vh;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  color: white;
+  font-size: 1.5em;
+  border-style: none;
+}
+
+.registrazione_Button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 10px auto;
+  width: 18vw;
+  height: 8vh;
+  border-radius: 10px;
+  padding-bottom: 5px;
+  color: white;
+  font-size: 1.7em;
+}
+
+/* ----------------------- ERRORE ------------------------- */
+
+.gelato_sciolto {
+  background-image: url('../img/back_error.jpg') no-repeat center center fixed;
+   -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.cornice1 {
+    background: url('../img/loghino.png') no-repeat center;
+    width: 150px;
+    height: 100px;
+    margin: auto;
+}
+
+.cornice2 {
+    background: url('../img/loghino.png') no-repeat center;
+    width: 150px;
+    height: 100px;
+    margin: auto;
+    position: relative;
+    top: 275px;
+}
+
+.box h1 {
+    font-size: 4em;
+}
+
+.box p {
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.homepage {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: auto;
+  display: block;
+  width: 14vw;
+  height: 7vh;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5em;
+  padding-top: 12px;
+}
+
+/* ----------------------- PAUL ------------------------- */
+
+h1, h2, h3{
+  font-family: pacifico;
+  text-align: center;
+}
+
+h1{font-size: 2em;
+}
+
+h2{
+  font-size: 1.5em;
+}
+
+h3{
+  font-size: 1.3em;
+}
+
+p{
+  font-family: arimo;
+}
+
+a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.pulsante{
+
+  /*margin-top: 35px;*/
+  padding: 0 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: pacifico;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+
+.overflow{
+  overflow: auto;
+
+}
+
+.testobianco{
+  color: white;
+}
+
+.testonero{
+  color: black;
+}
+
+.largo100{
+  width: 100%;
+}
+
+.boss{
+  padding: 3% 40%;
+}
+
+*{
+  margin: 0;
+   padding: 0;
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   font-weight: normal;
+   font-family: Arimo;
+}
+body{
+  background: url(img/icecreamsfondo.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+header {
+  height: 60px;
+  /*border: 1px solid #fff;*/
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+header nav{
+  text-align:center;
+  height: 100%;
+}
+
+header div{
+  width: 30.8%;
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  /*border: 1px solid #fff;*/
+  margin-top: : 0px;
+  padding: 0px;
+}
+header img {
+  width: 45px;
+  height: 45px;
+  padding-top: 5px;
+  /*border: 1px solid #fff;*/
+}
+
+#profilo {
+  font-family: pacifico;
+  font-size: 1.5em;
+  text-align: left;
+  }
+
+#contatti {
+  font-family: pacifico;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+div {
+  border-radius: 10px;
+}
+
+.Box {
+  background-color: rgba(0, 0, 0, 0.5);
+  position:relative;
+  margin:30px auto;
+  padding: 50px 0;
+}
+
+.home{
+  width: 40%;
+  height: 90%;
+}
+
+.Box h2 {
+  text-align: center;
+}
+
+.brand {
+  width: 20vw;
+  height: 15vw;
+  margin: auto;
+  border: 5px solid #fff;
+}
+
+.brand img{
+  max-width: 100%;
+  height: auto;
+}
+
+.Buttons {
+  margin-top: 40px;
+  border: 2px solid #fff;
+
+}
+
+.Button {
+  margin-top: 2%;
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+
+}
+
+label{
+  font-family: Pacifico;
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.Cerca{
+  width: 30%;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding-top: 15px;
+
+}
+
+
+/*
+.login{
+  width: 20%;
+  height: 50px;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}*/
+
+
+
+body{
+  background: url(img/pinup.jpg);
+  color: black;
+  }
+
+
+.utente{
+  width: 80%;
+
+}
+
+.Button label{
+  color: black;
+}
+
+
+.Buttons{
+  background: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+
+}
+
+
+.barrainfo{
+margin-top: 2%;
+margin-left: auto;
+margin-right: auto;
+width: 80%;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 1%;
+border-bottom-right-radius:0px;
+border-bottom-left-radius: 0px;
+}
+
+.risultati{
+  background: rgba(255, 255, 255, 0.8);
+  width: 80%;
+  margin-bottom: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 350px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+
+}
+
+.barrainfo div{
+  display: inline-block;
+  text-align: center;
+  width: 32%;
+
+
+}
+
+.risultato{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.risultato div{
+  display: table-cell;
+  vertical-align: middle;
+  width: 32%;
+  text-align: center;
+
+}
+
+.icone img{
+  max-width: 10%;
+  height: auto;
+  padding: 2px;
+}
+
+.icone img:last-child {
+  max-width: 35%;
+  margin-top: 5%;
+}
+
+.titolo{
+margin-bottom: 50px;
+
+}
+.informazioniutente {
+  padding: 0 20%;
+  display: inline-block;
+  margin: auto;
+
+
+  }
+
+.informazioniutente div{
+  width: 48%;
+  display: inline-block;
+  text-align: center;
+
+}
+
+.datiaccesso{
+  vertical-align: top;
+}
+
+.datiaccesso input[type=submit]{
+  margin-top: 35px;
+  padding: 0 60px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-family: pacifico;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 10px;
+
+}
+
+
+.risultato div.informazioni{
+  margin: auto;
+  width: 500px;
+}
+
+.risultato div.informazioni meter{
+  width: 100%;
+}
+
+.percentuale{
+width: 60%;
+
+}
+
+.datiutente input{
+margin: 5px;
+}
+
+/*
+/.testata{
+  width: 100%;
+  background-image: url(img/icecreamsfondo.jpg);
+  background-size: 100%;
+  height: 350px;
+}
+
+.ricercaavanzata{
+  width: 100%;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+*/

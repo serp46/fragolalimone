@@ -1,0 +1,4 @@
+services:
+#    gelato.example:
+#        class: GelatoBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
