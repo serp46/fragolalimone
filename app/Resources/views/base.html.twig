@@ -3,17 +3,19 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}{% endblock %}</title>
+
         {% block stylesheets %}
             <link type="text/css" href="css/reset.css" rel="stylesheet">
             <link type="text/css" href="css/style.css" rel="stylesheet">
         {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-        {% block stylesheet %}{% endblock %}
+    
     </head>
     <body class="sfondogelato">
+    
         {% block nav %}
             <nav class="navbar">
                 <ul class="navigation">
