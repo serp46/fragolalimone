@@ -11,11 +11,6 @@ class DefaultController extends Controller
         return $this->render('GelatoBundle:Default:index.html.twig');
     }
 
-    public function profiloAction()
-    {
-        return $this->render('GelatoBundle:Default:profilo.html.twig');
-    }
-
     public function utenteAction()
     {
         return $this->render('GelatoBundle:Default:utente.html.twig');
@@ -40,6 +35,7 @@ class DefaultController extends Controller
     {
         return $this->render('GelatoBundle:Default:risultatiroot.html.twig');
     }
+    
     public function registrazioneAction()
     {
         return $this->render('GelatoBundle:Default:registrazione.html.twig');
