@@ -4,6 +4,13 @@ html,
 body {
 	height: 100%;
 	width: 100%;
+  font-family: 'Shadows Into Light', cursive;
+  color: #fff;
+}
+
+@font-face {
+  font-family: pacifico;
+  src: url('../Font/pacifico.ttf');
 }
 
 .sfondo1 {
@@ -12,8 +19,6 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: 'Shadows Into Light', cursive;
-  color: #fff;
 }
 
 * {
@@ -28,13 +33,9 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
 div {
   border-radius: 10px;
-}
-
-@font-face {
-  font-family: pacifico;
-  src: url('../Font/pacifico.ttf');
 }
 
 .navbar {
