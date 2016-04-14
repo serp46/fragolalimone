@@ -68,8 +68,19 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
+<<<<<<< HEAD
 # FOS Configuration
+=======
+<<<<<<< HEAD
+# FOS Configuration
+fos_user:
+    db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
+    firewall_name: main
+    user_class: GelatoBundle\Entity\User
+=======
+>>>>>>> 2f74e4b7b45e9b96adbd714bdd32209ac91b49a9
 fos_user:
     db_driver: orm
     firewall_name: main
     user_class: GelatoBundle\Entity\User
+>>>>>>> refs/remotes/origin/master
