@@ -16,7 +16,6 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-weight: normal;
-
 }
 
 a {
@@ -25,11 +24,6 @@ a {
 }
 div {
   border-radius: 10px;
-}
-
-@font-face {
-  font-family: pacifico;
-  src: url('../Font/pacifico.ttf');
 }
 
 .navbar {
@@ -66,7 +60,7 @@ div {
 .left a {
   text-decoration: lowercase;
   font-size: 2em;
-  font-family: pacifico;
+  /*font-family: pacifico;*/
 }
 
 .left a:hover {
@@ -83,7 +77,7 @@ div {
 .right a {
     text-decoration: lowercase;
     font-size: 2em;
-    font-family: pacifico;
+    /*font-family: pacifico;*/
 }
 
 .right a:hover {
@@ -95,7 +89,7 @@ div {
   display: inline;
 }
 
-/* ----------------------- HOME ------------------------- */
+/* ----------------------- INDEX ------------------------- */
 
 .box {
   bottom: 25px;
@@ -143,9 +137,8 @@ div {
 .home_form {
   margin: 20px auto;
   text-align: center;
-  width: 40vw;
   height: auto;
-  line-height: 30px;
+  line-height: 35px;
 }
 
 .home_gusti {
@@ -166,12 +159,12 @@ div {
   height: 50px;
   border-radius: 10px;
   color: white;
-  font-family: 'Shadows Into Light', cursive;
   font-size: 1.5em;
   position: relative;
   margin-top: 25px;
   margin-bottom: 25px;
   border-style: none;
+  font-family: 'Shadows Into Light', cursive;
 }
 
 
@@ -205,7 +198,7 @@ div {
 
 .contatti ul li {
   list-style: none;
-  font-size: 1rem;
+  font-size: 1.3em;
   color: white;
   padding: 10px;
 }
@@ -219,9 +212,9 @@ div {
 
 .compilazione {
   margin: auto;
-  display: inline-block;
-  width: 25vw;
-  height: 7vh;
+  display: block;
+  width: 150px;
+  height: 60px;
 }
 
 .registrazione_payoff {
@@ -237,8 +230,8 @@ div {
 .registrazione_input {
   margin: auto;
   border-radius: 5px;
-  width: 12.5vw;
-  height: 3vh;
+  width: 160px;
+  height: 30px;
   color: black;
   font-size: 1em;
 }
@@ -253,17 +246,6 @@ div {
   color: white;
   font-size: 1.5em;
   border-style: none;
-}
-
-.registrazione_Button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
-  margin: 10px auto;
-  width: 18vw;
-  height: 8vh;
-  border-radius: 10px;
-  padding-bottom: 5px;
-  color: white;
-  font-size: 1.7em;
 }
 
 /* ----------------------- ERRORE ------------------------- */
@@ -315,8 +297,9 @@ div {
 
 /* ----------------------- PAUL ------------------------- */
 
+
 h1, h2, h3{
-  font-family: pacifico;
+  
   text-align: center;
 }
 
@@ -331,10 +314,6 @@ h3{
   font-size: 1.3em;
 }
 
-p{
-  font-family: arimo;
-}
-
 a{
   text-decoration: none;
   color: #fff;
@@ -346,14 +325,13 @@ a{
   padding: 0 60px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-family: pacifico;
+  /* font-family: pacifico; */
   font-size: 0.8em;
   border: none;
   border-radius: 10px;
   text-align: center;
 
 }
-
 
 .overflow{
   overflow: auto;
@@ -376,16 +354,7 @@ a{
   padding: 3% 40%;
 }
 
-*{
-  margin: 0;
-   padding: 0;
-   -webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-   box-sizing: border-box;
-   font-weight: normal;
-   font-family: Arimo;
-}
-body{
+body {
   background: url(img/icecreamsfondo.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -400,12 +369,12 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-header nav{
+header nav {
   text-align:center;
   height: 100%;
 }
 
-header div{
+header div {
   width: 30.8%;
   display: inline-block;
   vertical-align: middle;
@@ -414,6 +383,7 @@ header div{
   margin-top: : 0px;
   padding: 0px;
 }
+
 header img {
   width: 45px;
   height: 45px;
@@ -422,13 +392,13 @@ header img {
 }
 
 #profilo {
-  font-family: pacifico;
+  /* font-family: pacifico; */
   font-size: 1.5em;
   text-align: left;
   }
 
 #contatti {
-  font-family: pacifico;
+  /* font-family: pacifico; */
   font-size: 1.5em;
   text-align: right;
 }
@@ -480,7 +450,7 @@ div {
 }
 
 label{
-  font-family: Pacifico;
+  /* font-family: pacifico; */
   font-size: 1.2em;
   color: #fff;
 }
@@ -508,12 +478,10 @@ label{
   background-color: rgba(0, 0, 0, 0.4);
 }*/
 
-
-
-body{
+body {
   background: url(img/pinup.jpg);
   color: black;
-  }
+}
 
 
 .utente{
@@ -563,8 +531,6 @@ border-bottom-left-radius: 0px;
   display: inline-block;
   text-align: center;
   width: 32%;
-
-
 }
 
 .risultato{
@@ -603,7 +569,7 @@ margin-bottom: 50px;
 
   }
 
-.informazioniutente div{
+.informazioniutente div {
   width: 48%;
   display: inline-block;
   text-align: center;
@@ -619,7 +585,7 @@ margin-bottom: 50px;
   padding: 0 60px;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
-  font-family: pacifico;
+  /* font-family: pacifico; */
   font-size: 0.8em;
   border: none;
   border-radius: 10px;
