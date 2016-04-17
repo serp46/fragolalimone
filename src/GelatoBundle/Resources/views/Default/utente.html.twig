@@ -1,30 +1,16 @@
 {% extends "::base.html.twig" %}
-{% block stylesheet %}
-    <style>
-        .sfondogelato {
-            background: url('../img/pinup.jpg') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            font-family: 'Shadows Into Light', cursive;
-            color: #fff;
-        }
-        }
 
-    </style>
-{% endblock %}
 
 {% block body %}
-    <?php require_once ("header.php")  ?>
-    <div class="Box utente">
 
-      <div class="titolo testobianco"> <h1>Impostazioni Personali</h1></div>
+    
+<div class="Box utente">
 
-
+<div class="titolo testobianco"> <h1>Impostazioni Personali</h1></div>
 
 <div class="informazioniutente largo100">
-  <form class="datiutente" action="index.html" method="post">
+
+<form class="datiutente" action="index.html" method="post">
 
 <div class="datiutente">
 
@@ -42,6 +28,7 @@
 </div>
 
 <div class="datiaccesso">
+
           <label for="e-mail">E-mail</label>
           <br>
           <input type="text" name="name" value="luca.bottoni@gmail.com">
@@ -52,21 +39,22 @@
 <br>
           <input type="submit" name="name" value="Salva">
 
-
 </div>
 
   </div>
 
   </form>
+
+</div> <!-- Box utente -->
+
+<div class="barra"></div>
+
+<div class="preferiti">
+  <h2>Preferiti</h2>
 </div>
-        <div class="barra">
 
-
-        </div>
-        <div class="preferiti">
-          <h2>Preferiti</h2>
-  </div>
   <div class="barrainfo testobianco">
+
     <div class="nome">Gelateria</div>
     <div class="informazioni">Informazioni</div>
     <div class="icone">Social</div>
@@ -75,8 +63,6 @@
 
           <div class="risultati overflow">
 
-
-      <hr>
               <div class="risultato">
 
                   <div class="nome"><h2>Gelato Mania</h2></div>

@@ -1,33 +1,34 @@
 {% extends "::base.html.twig" %}
-{% block title %}GelatoBundle:Header:Contatti{% endblock %}
+
+{% block title %}Fragola & Limone - Admin{% endblock %}
 
 {% block stylesheet %}
+
 <style>
-        .sfondogelato {
-        background: url('../img/pinup.jpg') no-repeat center center fixed;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        font-family: 'Shadows Into Light', cursive;
-        color: #fff;
-    }
+    body {
+    background: url('img/pinup.jpg') no-repeat center center fixed;
     }
 
 </style>
+
 {% endblock %}
 
 {% block body %}
-
 
 <form action="mailto:paul.sergentu@gmail.com" method="GET" name="inserimentogelati">
 
 <div class="Buttons largo100">
 
+<br>
+
 <h2>Stai cercando un gelato...</h2>
 
-    <div class="Button">
+<div class="buttons_contenitor">
+
+  <div class="Button">
+
     <label for="gusto1">Ai gusti</label>
+    <br>
     <br>
     <select class="gusti" name="gusto1">
       <option value="1"> Mela</option>
@@ -45,13 +46,13 @@
       <option value="1"> Mela</option>
       <option value="2"> Melograno</option>
     </select>
-      </div>
-
-
+  </div>
 
   <div class="Button">
+
     <label for="citta">nella città di:</label>
     <br>
+    <br>
     <select class="gusti" name="gusto3">
       <option value="1"> Mela</option>
       <option value="2"> Melograno</option>
@@ -59,13 +60,17 @@
   </div>
 
   <div class="Button">
+
     <label for="periodo">il giorno:</label>
+    <br>
     <br>
     <select class="gusti" name="gusto3">
       <option value="1"> Mela</option>
       <option value="2"> Melograno</option>
     </select>
   </div>
+
+</div>
 
 
   <div class="largo100 boss">
@@ -74,13 +79,13 @@
 
 </div>
 
+</form>
+
             <div class="barrainfo testobianco">
                 <div class="nome">Gelateria</div>
                 <div class="informazioni">Informazioni</div>
                 <div class="icone">Social</div>
             </div>
-
-</form>
 
     <div class="risultati overflow">
 
