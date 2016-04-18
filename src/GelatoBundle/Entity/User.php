@@ -37,6 +37,16 @@ class User extends BaseUser
      */
     private $defaultCity;
 
+    /**
+     * @var string
+     *
+     * @ORM\OneToOne(targetEntity="Ricerca")
+     * @ORM\JoinColumn(name="utente_id", referencedColumnName="id")
+     */
+    private $ricerche;
+
+
+
 
     /**
      * Get id

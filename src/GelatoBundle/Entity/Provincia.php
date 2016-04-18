@@ -38,6 +38,11 @@ class Provincia
     private $citta;
 
 
+    public function __construct() {
+        $this->$citta = new Doctrine\Common\Collections\ArrayCollection();
+    }
+
+
     /**
      * Get id
      *

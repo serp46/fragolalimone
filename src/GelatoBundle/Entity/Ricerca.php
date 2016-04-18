@@ -28,6 +28,14 @@ class Ricerca
      */
     private $dateSearch;
 
+     /**
+     * @var string
+     *
+     * @ORM\OneToOne(targetEntity="Citta")
+     * @ORM\JoinColumn(name="Ricerca", referencedColumnName="id")
+     */
+    private $citta;
+
 
     /**
      * Get id
