@@ -3,14 +3,15 @@
 namespace GelatoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use GelatoBundle\Entity\Citta;
 
 /**
- * Gusti
+ * Provincia
  *
- * @ORM\Table(name="gusti")
- * @ORM\Entity(repositoryClass="GelatoBundle\Repository\GustiRepository")
+ * @ORM\Table(name="provincia")
+ * @ORM\Entity(repositoryClass="GelatoBundle\Repository\ProvinciaRepository")
  */
-class Gusti
+class Provincia
 {
     /**
      * @var int
@@ -30,6 +31,14 @@ class Gusti
 
 
     /**
+     * @var string
+     *
+     * @ORM\OneToMany(targetEntity="Citta", MappedBy="provincia")
+     */
+    private $citta;
+
+
+    /**
      * Get id
      *
      * @return int
@@ -44,7 +53,7 @@ class Gusti
      *
      * @param string $name
      *
-     * @return Gusti
+     * @return Provincia
      */
     public function setName($name)
     {

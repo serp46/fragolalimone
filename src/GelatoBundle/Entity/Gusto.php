@@ -2,16 +2,20 @@
 
 namespace GelatoBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use GelatoBundle\Entity\Gelateria;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Province
+ * Gusto
  *
- * @ORM\Table(name="province")
- * @ORM\Entity(repositoryClass="GelatoBundle\Repository\ProvinceRepository")
+ * @ORM\Table(name="gusto")
+ * @ORM\Entity(repositoryClass="GelatoBundle\Repository\GustoRepository")
  */
-class Province
+class Gusto
 {
+
     /**
      * @var int
      *
@@ -25,8 +29,22 @@ class Province
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, unique=true)
+     * @Assert\NotBlank()
      */
     private $name;
+
+    /**
+    *
+    *@ManyToMany(targetEntity="Gelateria", inversedBy="gusti")
+    *@JoinTable(name="lista_gusti") 
+    */
+    private $gelaterie;
+
+
+
+    public function __construct() {
+        $this->$gelateria = new ArrayCollection;
+    }
 
 
     /**
@@ -44,7 +62,7 @@ class Province
      *
      * @param string $name
      *
-     * @return Province
+     * @return Gusto
      */
     public function setName($name)
     {

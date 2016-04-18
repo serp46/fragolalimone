@@ -2,7 +2,8 @@
 
 namespace GelatoBundle\Entity;
 
-use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumnName as ORM;
+use GelatoBundle\Entity\Provincia;
 
 /**
  * Citta
@@ -24,9 +25,18 @@ class Citta
     /**
      * @var string
      *
-     * @ORM\Column(name="ciname", type="string", length=255, unique=true)
+     * @ORM\Column(name="name", type="string", length=255, unique=true)
      */
-    private $ciname;
+    private $name;
+
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="Provincia", inversedBy="citta")
+     * @ORM\JoinColumnName(name="provincia_id", referenceColumnName="id")
+     */
+    private $provincia;
+
+
 
 
     /**
@@ -40,27 +50,27 @@ class Citta
     }
 
     /**
-     * Set ciname
+     * Set name
      *
-     * @param string $ciname
+     * @param string $name
      *
      * @return Citta
      */
-    public function setCiname($ciname)
+    public function setName($name)
     {
-        $this->ciname = $ciname;
+        $this->name = $name;
 
         return $this;
     }
 
     /**
-     * Get ciname
+     * Get name
      *
      * @return string
      */
-    public function getCiname()
+    public function getName()
     {
-        return $this->ciname;
+        return $this->name;
     }
 }
 

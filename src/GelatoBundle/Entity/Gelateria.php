@@ -3,6 +3,7 @@
 namespace GelatoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use GelatoBundle\Entity\Gusto;
 
 /**
  * Gelateria
@@ -98,6 +99,18 @@ class Gelateria
      */
     private $sunday;
 
+    /**
+    *
+    *@ORM\ManyToMany(targetEntity="Gusto", MappeBy="gelaterie")
+    */
+    private $gusti;
+
+
+
+
+    public function __construct() {
+        $this->$gusti = new ArrayCollection();
+    }
 
     /**
      * Get id
