@@ -494,15 +494,12 @@ margin-bottom: 50px;
   border: 1px solid white;
 }
 
-
 .datiutente input[type=text] {
   width: 150px;
   height: 25px;
   border-radius: 5px;
   border: none;
 }
-
-
 
 .datiaccesso {
   vertical-align: top;
