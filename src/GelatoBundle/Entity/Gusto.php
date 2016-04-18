@@ -35,8 +35,8 @@ class Gusto
 
     /**
     *
-    *@ManyToMany(targetEntity="Gelateria", inversedBy="gusti")
-    *@JoinTable(name="lista_gusti") 
+    *@ORM\ManyToMany(targetEntity="Gelateria", inversedBy="gusti")
+    *@ORM\JoinTable(name="lista_gusti") 
     */
     private $gelaterie;
 
@@ -81,4 +81,3 @@ class Gusto
         return $this->name;
     }
 }
-

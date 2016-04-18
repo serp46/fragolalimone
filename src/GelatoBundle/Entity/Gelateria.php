@@ -101,7 +101,7 @@ class Gelateria
 
     /**
     *
-    *@ORM\ManyToMany(targetEntity="Gusto", MappeBy="gelaterie")
+    *@ORM\ManyToMany(targetEntity="Gusto", mappedBy="gelaterie")
     */
     private $gusti;
 

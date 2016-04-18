@@ -2,7 +2,7 @@
 
 namespace GelatoBundle\Entity;
 
-use Doctrine\ORM\Mapping\JoinColumnName as ORM;
+use Doctrine\ORM\Mapping as ORM;
 use GelatoBundle\Entity\Provincia;
 
 /**
@@ -32,7 +32,7 @@ class Citta
     /**
      *
      * @ORM\ManyToOne(targetEntity="Provincia", inversedBy="citta")
-     * @ORM\JoinColumnName(name="provincia_id", referenceColumnName="id")
+     * @ORM\JoinColumn(name="provincia_id", referencedColumnName="id")
      */
     private $provincia;
 
@@ -73,4 +73,3 @@ class Citta
         return $this->name;
     }
 }
-

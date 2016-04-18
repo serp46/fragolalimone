@@ -33,7 +33,7 @@ class Provincia
     /**
      * @var string
      *
-     * @ORM\OneToMany(targetEntity="Citta", MappedBy="provincia")
+     * @ORM\OneToMany(targetEntity="Citta", mappedBy="provincia")
      */
     private $citta;
 
@@ -72,4 +72,3 @@ class Provincia
         return $this->name;
     }
 }
-
