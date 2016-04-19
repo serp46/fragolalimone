@@ -294,6 +294,254 @@ div {
   padding-top: 12px;
 }
 
+/* --------------------------- AMMINISTRATORE ----------------------------- */
+.root_personale {
+  background: url('../img/pinup.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.buttons {
+  border: 2px solid white;
+  background: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  height: 240px;
+  margin: 10px auto; 
+}
+
+.admin_personal {
+  width: 30%;
+  height: 90%;
+  display: inline-block;
+  margin: 10px 10px;
+  color: black;
+}
+
+.admin_add {
+  width: 30%;
+  height: 90%;
+  display: inline-block;
+  position: relative;
+  top: -70px;
+  color: black;
+}
+
+.admin_cerca {
+  display: inline-block;
+}
+
+.inserisciDatiAd {
+  display: inline-block;
+}
+
+.inserisciDatiPers {
+  display: block;
+  text-align: left;
+}
+
+.list_admins {
+  display: inline-block;
+  width: 30%;
+  height: 90%;
+  position: relative;
+  top: -188px;
+  left: 100px;
+  color: black;
+}
+
+.list_ads {
+  display: block;
+  text-align: left;
+}
+
+.list_box {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 170px;
+  height: 190px;
+  border-radius: 10px; 
+/*overflow: auto; */
+}
+
+.ad_input {
+  border-radius: 5px;
+  width: 13vw;
+  height: 25px;
+  margin-top: 5px;
+}
+
+ .ad_button {
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 10px auto;
+  width: 6vw;
+  height: 3vh;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.9em;
+  border-style: none;
+}
+
+.ad_pers_dati {
+  display: inline-block;
+}
+
+.ad_mod {
+  display: inline-block;
+}
+
+.ad_button {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.admin_button {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+.box_aggiungi_gelateria {
+  background: rgba(255, 255, 255, 0.9);
+  width: 80%;
+  margin: 10px auto;
+  height: auto;
+  padding: 10px;
+  border: 2px solid white;
+  color: black;
+  border-radius: 10px;
+}
+
+.titolo_aggiungi_gelateria {
+  height: 20px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.input_area {
+  display: inline-block;
+}
+
+.admin_input {
+  border-radius: 5px;
+  width: 13vw;
+  height: 25px;
+  margin: 3px;
+}
+
+.admin_aggiungi {
+  display: inline-block;
+}
+
+.barrainfo {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.campi_ricerca {
+  border-radius: 5px;
+  width: 13vw;
+  height: 25px;
+  margin: 3px;
+}
+
+.box_risultati {
+  width: 80%;
+  margin: 10px auto;
+  height: 448px;
+  color: black;
+}
+
+.titolo_ricerca {
+  height: 10px;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.input_area {
+  margin-right: 20px;
+}
+
+.row {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  text-align: left;
+  border-radius: 0px;
+  padding-left: 15px;
+}
+
+.ricerca {
+  background-color: rgba(255, 255, 255, 0.9);
+  display: inline-block;
+  width: 100%;
+  height: 85px;
+  padding-top: 10px;
+  padding-left: 10px;
+  border-radius: 10px 10px 0 0;
+} 
+
+.admin_button {
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 6vw;
+  height: 3vh;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.8em;
+  border-style: none;
+  margin-right: 5px;
+}
+
+.risultati {
+  display: block;
+  height: 359px;
+  overflow: auto;
+  text-align: left;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.city {
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.indirizzo {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  font-size: 0.7em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 0px;
+}
+
+.info {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  position: relative;
+  left: 350px;
+}
+
+.cestino {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  left: 800px;
+}
+
+.cestino img {
+  width: 40px; 
+  height: 40px;
+}
+
+
 /* ----------------------- PAUL ------------------------- */
 
 
@@ -320,22 +568,10 @@ a {
   overflow: auto;
 }
 
-.testonero {
-  color: black;
-}
-
 .boss {
   padding: 3% 40%;
   margin: auto;
   text-align: center;
-}
-
-body {
-  background: url(img/icecreamsfondo.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 #profilo {
@@ -357,7 +593,7 @@ body {
   text-align: center;
 }
 
-.home{
+.home {
   width: 40%;
   height: 90%;
 }
@@ -431,7 +667,7 @@ label {
   font-size: 2em;
 }
 
-.barrainfo {
+.Barrainfo {
 margin-top: 2%;
 margin-left: auto;
 margin-right: auto;
@@ -442,7 +678,7 @@ border-bottom-right-radius:0px;
 border-bottom-left-radius: 0px;
 }
 
-.risultati {
+.Risultati {
   background: rgba(255, 255, 255, 0.8);
   width: 80%;
   margin-bottom: 5%;
@@ -453,19 +689,19 @@ border-bottom-left-radius: 0px;
   border-top-right-radius: 0px;
 }
 
-.barrainfo div {
+.Barrainfo div {
   display: inline-block;
   text-align: center;
   width: 32%;
   font-size: 1.5em;
 }
 
-.risultato {
+.Risultato {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.risultato div {
+.Risultato div {
   display: table-cell;
   vertical-align: middle;
   width: 32%;

@@ -76,13 +76,6 @@ class Provincia
     {
         return $this->name;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->citta = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
     /**
      * Add cittum
