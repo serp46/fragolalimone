@@ -71,4 +71,45 @@ class Provincia
     {
         return $this->name;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->citta = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add cittum
+     *
+     * @param \GelatoBundle\Entity\Citta $cittum
+     *
+     * @return Provincia
+     */
+    public function addCittum(\GelatoBundle\Entity\Citta $cittum)
+    {
+        $this->citta[] = $cittum;
+
+        return $this;
+    }
+
+    /**
+     * Remove cittum
+     *
+     * @param \GelatoBundle\Entity\Citta $cittum
+     */
+    public function removeCittum(\GelatoBundle\Entity\Citta $cittum)
+    {
+        $this->citta->removeElement($cittum);
+    }
+
+    /**
+     * Get citta
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCitta()
+    {
+        return $this->citta;
+    }
 }

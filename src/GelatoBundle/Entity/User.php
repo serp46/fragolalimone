@@ -4,6 +4,8 @@ namespace GelatoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use FOS\UserBundle\Model\User as BaseUser;
+use GelatoBundle\Entity\Ricerca;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * User
@@ -37,7 +39,22 @@ class User extends BaseUser
      */
     private $defaultCity;
 
+    /**
+    *
+    *@ORM\ManyToOne(targetEntity="Citta", inversedBy="utenti")
+    *@ORM\JoinColumn(name="citta_id", referencedColumnName="id")
+    **/
+    private $citta;
 
+    /**
+     *
+     * @ORM\OneToMany(targetEntity="Ricerca", mappedBy="utenti")
+     */
+     private $utenti;
+     public function __construct() {
+         parent::__construct();
+         $this->ricerche = new ArrayCollection();
+     }
     /**
      * Get id
      *
@@ -166,5 +183,63 @@ class User extends BaseUser
     public function getDefaultCity()
     {
         return $this->defaultCity;
+    }
+
+    /**
+     * Set citta
+     *
+     * @param \GelatoBundle\Entity\Citta $citta
+     *
+     * @return User
+     */
+    public function setCitta(\GelatoBundle\Entity\Citta $citta = null)
+    {
+        $this->citta = $citta;
+
+        return $this;
+    }
+
+    /**
+     * Get citta
+     *
+     * @return \GelatoBundle\Entity\Citta
+     */
+    public function getCitta()
+    {
+        return $this->citta;
+    }
+
+    /**
+     * Add utenti
+     *
+     * @param \GelatoBundle\Entity\Ricerca $utenti
+     *
+     * @return User
+     */
+    public function addUtenti(\GelatoBundle\Entity\Ricerca $utenti)
+    {
+        $this->utenti[] = $utenti;
+
+        return $this;
+    }
+
+    /**
+     * Remove utenti
+     *
+     * @param \GelatoBundle\Entity\Ricerca $utenti
+     */
+    public function removeUtenti(\GelatoBundle\Entity\Ricerca $utenti)
+    {
+        $this->utenti->removeElement($utenti);
+    }
+
+    /**
+     * Get utenti
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getUtenti()
+    {
+        return $this->utenti;
     }
 }

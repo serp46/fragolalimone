@@ -4,6 +4,7 @@ namespace GelatoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use GelatoBundle\Entity\Gusto;
+use GelatoBundle\Entity\Citta;
 
 /**
  * Gelateria
@@ -104,6 +105,14 @@ class Gelateria
     *@ORM\ManyToMany(targetEntity="Gusto", mappedBy="gelaterie")
     */
     private $gusti;
+
+    /**
+    *
+    *@ORM\ManyToOne(targetEntity="Citta", inversedBy="gelaterie")
+    *@ORM\JoinColumn(name="citta_id", referencedColumnName="id")
+    */
+    private $citta;
+
 
 
 
@@ -384,5 +393,63 @@ class Gelateria
     public function getSunday()
     {
         return $this->sunday;
+    }
+
+    /**
+     * Add gusti
+     *
+     * @param \GelatoBundle\Entity\Gusto $gusti
+     *
+     * @return Gelateria
+     */
+    public function addGusti(\GelatoBundle\Entity\Gusto $gusti)
+    {
+        $this->gusti[] = $gusti;
+
+        return $this;
+    }
+
+    /**
+     * Remove gusti
+     *
+     * @param \GelatoBundle\Entity\Gusto $gusti
+     */
+    public function removeGusti(\GelatoBundle\Entity\Gusto $gusti)
+    {
+        $this->gusti->removeElement($gusti);
+    }
+
+    /**
+     * Get gusti
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getGusti()
+    {
+        return $this->gusti;
+    }
+
+    /**
+     * Set citta
+     *
+     * @param \GelatoBundle\Entity\Citta $citta
+     *
+     * @return Gelateria
+     */
+    public function setCitta(\GelatoBundle\Entity\Citta $citta = null)
+    {
+        $this->citta = $citta;
+
+        return $this;
+    }
+
+    /**
+     * Get citta
+     *
+     * @return \GelatoBundle\Entity\Citta
+     */
+    public function getCitta()
+    {
+        return $this->citta;
     }
 }

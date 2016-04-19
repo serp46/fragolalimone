@@ -3,6 +3,8 @@
 namespace GelatoBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use GelatoBundle\Entity\Citta;
+use GelatoBundle\Entity\Gusto;
 
 /**
  * Ricerca
@@ -28,6 +30,27 @@ class Ricerca
      */
     private $dateSearch;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="Citta", inversedBy="ricerche")
+     * @ORM\JoinColumn(name="citta_id", referencedColumnName="id")
+     */
+    private $citta;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="ricerche")
+     * @ORM\JoinColumn(name="utenti_id", referencedColumnName="id")
+     */
+    private $utenti;
+
+    /**
+    *
+    *@ORM\OneToMany(targetEntity="Gusto", mappedBy="ricerche")
+    */
+    private $gusti;
+
+    public function __construct(){
+        $this->gusti = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -62,5 +85,86 @@ class Ricerca
     {
         return $this->dateSearch;
     }
-}
 
+    /**
+     * Set citta
+     *
+     * @param \GelatoBundle\Entity\Citta $citta
+     *
+     * @return Ricerca
+     */
+    public function setCitta(\GelatoBundle\Entity\Citta $citta = null)
+    {
+        $this->citta = $citta;
+
+        return $this;
+    }
+
+    /**
+     * Get citta
+     *
+     * @return \GelatoBundle\Entity\Citta
+     */
+    public function getCitta()
+    {
+        return $this->citta;
+    }
+
+    /**
+     * Set utenti
+     *
+     * @param \GelatoBundle\Entity\User $utenti
+     *
+     * @return Ricerca
+     */
+    public function setUtenti(\GelatoBundle\Entity\User $utenti = null)
+    {
+        $this->utenti = $utenti;
+
+        return $this;
+    }
+
+    /**
+     * Get utenti
+     *
+     * @return \GelatoBundle\Entity\User
+     */
+    public function getUtenti()
+    {
+        return $this->utenti;
+    }
+
+    /**
+     * Add gusti
+     *
+     * @param \GelatoBundle\Entity\Gusto $gusti
+     *
+     * @return Ricerca
+     */
+    public function addGusti(\GelatoBundle\Entity\Gusto $gusti)
+    {
+        $this->gusti[] = $gusti;
+
+        return $this;
+    }
+
+    /**
+     * Remove gusti
+     *
+     * @param \GelatoBundle\Entity\Gusto $gusti
+     */
+    public function removeGusti(\GelatoBundle\Entity\Gusto $gusti)
+    {
+        $this->gusti->removeElement($gusti);
+    }
+
+    /**
+     * Get gusti
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getGusti()
+    {
+        return $this->gusti;
+    }
+}
