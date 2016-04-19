@@ -2,7 +2,7 @@
 
 namespace GelatoBundle\Entity;
 
-use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\ArrayCollection();
 use Doctrine\ORM\Mapping as ORM;
 use GelatoBundle\Entity\Gelateria;
 use GelatoBundle\Entity\Ricerca;
@@ -51,7 +51,7 @@ class Gusto
 
 
     public function __construct() {
-        $this->$gelateria = new ArrayCollection;
+        $this->$gelateria = new Doctrine\Common\Collections\ArrayCollection();
     }
 
 

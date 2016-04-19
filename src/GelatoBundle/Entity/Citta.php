@@ -64,7 +64,6 @@ class Citta
 
 
 
-
     /**
      * Get id
      *

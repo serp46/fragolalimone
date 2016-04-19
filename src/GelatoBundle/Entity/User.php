@@ -40,11 +40,19 @@ class User extends BaseUser
     private $defaultCity;
 
     /**
-    *
-    *@ORM\ManyToOne(targetEntity="Citta", inversedBy="utenti")
-    *@ORM\JoinColumn(name="citta_id", referencedColumnName="id")
-    **/
+     *
+     * @ORM\ManyToOne(targetEntity="Citta", inversedBy="utenti")
+     * @ORM\JoinColumn(name="citta_id", referencedColumnName="id")
+     */
     private $citta;
+    /**
+     * @var string
+     *
+     * @ORM\OneToOne(targetEntity="Ricerca")
+     * @ORM\JoinColumn(name="utente_id", referencedColumnName="id")
+     */
+    private $ricerche;
+
 
     /**
      *
