@@ -39,7 +39,7 @@ class Provincia
 
 
     public function __construct() {
-        $this->$citta = new Doctrine\Common\Collections\ArrayCollection();
+        $this->citta = new Doctrine\Common\Collections\ArrayCollection();
     }
 
 

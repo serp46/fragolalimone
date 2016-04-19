@@ -30,7 +30,6 @@ class Gusto
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255, unique=true)
-     * @Assert\NotBlank()
      */
     private $name;
 
@@ -51,7 +50,7 @@ class Gusto
 
 
     public function __construct() {
-        $this->$gelateria = new Doctrine\Common\Collections\ArrayCollection();
+        $this->gelaterie = new Doctrine\Common\Collections\ArrayCollection();
     }
 
 

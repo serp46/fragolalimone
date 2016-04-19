@@ -118,7 +118,7 @@ class Gelateria
 
 
     public function __construct() {
-        $this->$gusti = new ArrayCollection();
+        $this->gusti = new ArrayCollection();
     }
 
     /**
