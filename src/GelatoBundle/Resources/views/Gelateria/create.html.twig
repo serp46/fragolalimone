@@ -1,7 +1,15 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}GelatoBundle:Gelateria:create{% endblock %}
+{% block title %}Aggiungi gelateria{% endblock %}
 
 {% block body %}
-<h1>Welcome to the Gelateria:create page</h1>
+<h1>Aggiungi una nuova gelateria</h1>
+<div id="gelateriaadmin">
+      <div id="descrizioneadmin">
+
+        {{ form_start(form) }}
+        {{ form_widget(form)}}
+        {{ form_end(form) }}
+        </div>
+</div>
 {% endblock %}

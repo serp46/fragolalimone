@@ -7,13 +7,14 @@
      <div class="Buttons largo100">
 
     <div class="admin_personal">
-
+{{ form_start(form) }}
         <form  action="/" method="POST" name="inserimento-dati">
 
           <h3 class="inserisciDatiPers">Dati Personali:</h3>
 
            <div class="ad_pers_dati">
               <input class="ad_input" type="text" name="gelateria" placeholder="Nome">
+              {{ form_row(form.nome, {'attr': {'class': 'ad_input'}})}}
             </div>
 
             <div class="ad_pers_dati">
@@ -34,13 +35,14 @@
 
             <div class="ad_mod">
               <button class="ad_button">Modifica</button>
-            </div> 
+            </div>
 
             <div class="ad_pers_cerca">
               <button class="ad_button">Salva</button>
-            </div> 
+            </div>
+{{ form_end(form) }}
+        </form>
 
-        </form> 
       </div> <!-- admin_pers -->
 
       <div class="admin_add">
@@ -65,11 +67,11 @@
 
           <div class="admin_cerca">
               <button class="ad_button">Aggiungi</button>
-            </div> 
+            </div>
 
-        </form> 
+        </form>
       </div> <!-- admin_add -->
-    
+
       <div class="list_admins">
 
         <h3 class="list_ads">Amministratori:</h3>
@@ -80,20 +82,20 @@
     </div> <!-- buttons -->
 
       <div class="box_aggiungi_gelateria">
-       
+
          <h3 class="titolo_aggiungi_gelateria">Aggiungi Gelateria:</h3>
 
         <div class="input_area">
           <input class="admin_input" type="text" name="gelateria" placeholder="Gelateria"/>
-        </div> 
+        </div>
 
         <div class="input_area">
           <input class="admin_input" type="text" name="città" placeholder="Città"/>
-        </div> 
+        </div>
 
         <div class="input_area">
           <input class="admin_input" type="text" name="provincia" placeholder="Provincia"/>
-        </div> 
+        </div>
 
         <div class="input_area">
           <input class="admin_input" type="text" name="indirizzo" placeholder="Indirizzo"/>
@@ -105,18 +107,18 @@
 
         <div class="admin_aggiungi">
           <button class="admin_button">Aggiungi</button>
-        </div> 
+        </div>
 
       </div> <!-- box_aggiungi_gelateria -->
 
 
-    
-    <div class="box_risultati"> 
+
+    <div class="box_risultati">
 
       <div class="ricerca">
 
       <h3 class="titolo_ricerca">Ricerca Avanzata:</h3>
-              
+
         <div class="barrainfo">
           <input class="campi_ricerca" type="text" name="email" class="input" placeholder="Nome Gelateria">
         </div>
@@ -124,14 +126,14 @@
         <div class="barrainfo">
           <input class="campi_ricerca" type="text" name="email" class="input" placeholder="Città">
         </div>
-        
+
         <div class="admin_aggiungi">
           <button class="admin_button">Cerca</button>
-        </div> 
+        </div>
 
     </div> <!-- box_risultati -->
 
-    <div class="risultati">  
+    <div class="risultati">
 
       <div class="row">
           <h2 class="city">Bandirali<br>
@@ -145,7 +147,7 @@
                   </div>
       </div>
 
-            
+
 
       <div class="row">
           <h2 class="city">Bandirali<br>
@@ -159,7 +161,7 @@
                   </div>
       </div>
 
-            
+
 
       <div class="row">
           <h2 class="city">Bandirali<br>
@@ -173,7 +175,7 @@
                   </div>
       </div>
 
-            
+
 
       <div class="row">
           <h2 class="city">Bandirali<br>
@@ -187,7 +189,7 @@
                   </div>
       </div>
 
-            
+
 
       <div class="row">
           <h2 class="city">Bandirali<br>
@@ -201,7 +203,7 @@
                   </div>
       </div>
 
-            
+
 
       <div class="row">
           <h2 class="city">Bandirali<br>
@@ -215,7 +217,7 @@
                   </div>
       </div>
 
-            
+
 
       <div class="row">
           <h2 class="city">Bandirali<br>
@@ -229,7 +231,7 @@
                   </div>
       </div>
 
-            
+
 
     </div> <!-- risultati -->
 

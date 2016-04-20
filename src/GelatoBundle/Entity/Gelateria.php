@@ -5,6 +5,7 @@ namespace GelatoBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use GelatoBundle\Entity\Gusto;
 use GelatoBundle\Entity\Citta;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Gelateria
