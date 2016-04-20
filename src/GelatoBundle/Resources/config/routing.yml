@@ -26,3 +26,15 @@ gelato_risultatiroot:
 gelato_registrazione:
         path:     /registrazione
         defaults: { _controller: GelatoBundle:Default:registrazione }
+
+create:
+    path:     /create
+    defaults: { _controller: GelatoBundle:Gelateria:create }
+
+edit:
+    path:     /edite
+    defaults: { _controller: GelatoBundle:Gelateria:edit }
+
+delete:
+    path:     /delete
+    defaults: { _controller: GelatoBundle:Gelateria:delete }
