@@ -36,9 +36,7 @@ class GelateriaType extends AbstractType
             ->add('gusti', EntityType::class, [
                 'class' => 'GelatoBundle:Gusto',
                 'choice_label' => 'name',
-                'multiple' => true,
             ])
-            ->add('citta')
         ;
     }
 

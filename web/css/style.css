@@ -462,6 +462,10 @@ div {
   margin-right: 20px;
 }
 
+.checkbox_area {
+  display: inline-block;
+}
+
 .row {
   background-color: rgba(255, 255, 255, 0.9);
   display: inline-block;
@@ -639,8 +643,8 @@ a {
 }
 
 label {
-  font-size: 1.2em;
-  color: #fff;
+  font-size: 1em;
+  color: black;
 }
 
 .Cerca {
