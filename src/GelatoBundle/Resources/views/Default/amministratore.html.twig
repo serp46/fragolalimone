@@ -7,19 +7,19 @@
      <div class="Buttons largo100">
 
     <div class="admin_personal">
-{{ form_start(form) }}
-        <form  action="/" method="POST" name="inserimento-dati">
+
+        <form action="/" method="POST" name="inserimento-dati">
 
           <h3 class="inserisciDatiPers">Dati Personali:</h3>
 
            <div class="ad_pers_dati">
               <input class="ad_input" type="text" name="gelateria" placeholder="Nome">
-              {{ form_row(form.name, {'attr': {'class': 'ad_input'}})}}
             </div>
 
             <div class="ad_pers_dati">
+
               <input class="ad_input" type="text" name="cognome" class="input" placeholder="Cognome">
-              {{ form_row(form.name, {'attr': {'class': 'ad_input'}})}}
+
             </div>
 
             <div class="ad_pers_dati">
@@ -41,7 +41,7 @@
             <div class="ad_pers_cerca">
               <button class="ad_button">Salva</button>
             </div>
-{{ form_end(form) }}
+
         </form>
 
       </div> <!-- admin_pers -->
@@ -84,23 +84,35 @@
 
       <div class="box_aggiungi_gelateria">
 
+      {{ form_start(form) }}
+
          <h3 class="titolo_aggiungi_gelateria">Aggiungi Gelateria:</h3>
 
         <div class="input_area">
           <input class="admin_input" type="text" name="gelateria" placeholder="Gelateria"/>
+          {{ form_row(form.name, {'attr': {'class': 'admin_input'}}) }}
         </div>
 
         <div class="input_area">
           <input class="admin_input" type="text" name="città" placeholder="Città"/>
+          {{ form_row(form.city, {'attr': {'class': 'admin_input'}}) }}
         </div>
 
         <div class="input_area">
-          <input class="admin_input" type="text" name="provincia" placeholder="Provincia"/>
+          <input class="admin_input" type="text" name="indirizzo" placeholder="Indirizzo"/>
+          {{ form_row(form.address, {'attr': {'class': 'admin_input'}}) }}
+        </div>
+
+        <div class="input_area">
+          <input class="admin_input" type="text" name="indirizzo" placeholder="Indirizzo"/>
+          {{ form_row(form.phone, {'attr': {'class': 'admin_input'}}) }}
         </div>
 
         <div class="input_area">
           <input class="admin_input" type="text" name="indirizzo" placeholder="Indirizzo"/>
         </div>
+
+
 
         <div class="admin_aggiungi">
           <button class="admin_button">Gusti</button>
@@ -110,8 +122,9 @@
           <button class="admin_button">Aggiungi</button>
         </div>
 
-      </div> <!-- box_aggiungi_gelateria -->
+      {{ form_end(form) }}
 
+      </div> <!-- box_aggiungi_gelateria -->
 
 
     <div class="box_risultati">
