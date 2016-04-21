@@ -145,4 +145,6 @@ class Gusto
     {
         return $this->ricerche;
     }
+
+    
 }

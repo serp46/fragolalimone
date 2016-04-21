@@ -223,4 +223,9 @@ class Citta
     {
         return $this->gelaterie;
     }
+
+    public function __toString()
+    {
+        return $this->getName();
+    }
 }

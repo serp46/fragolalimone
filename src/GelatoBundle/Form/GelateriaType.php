@@ -8,6 +8,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class GelateriaType extends AbstractType
 {
@@ -19,7 +20,10 @@ class GelateriaType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('city')
+            ->add('city', EntityType::class, [
+                'class' => 'GelatoBundle:Citta',
+                'choice_label' => 'name'
+            ])
             ->add('address')
             ->add('phone')
             ->add('monday')
@@ -29,7 +33,11 @@ class GelateriaType extends AbstractType
             ->add('friday')
             ->add('saturday')
             ->add('sunday')
-            ->add('gusti')
+            ->add('gusti', EntityType::class, [
+                'class' => 'GelatoBundle:Gusto',
+                'choice_label' => 'name',
+                'multiple' => true,
+            ])
             ->add('citta')
         ;
     }

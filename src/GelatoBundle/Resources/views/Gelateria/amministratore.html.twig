@@ -7,9 +7,7 @@
      <div class="Buttons largo100">
 
     <div class="admin_personal">
-{{ form_start(form) }}
-        <form  action="/" method="POST" name="inserimento-dati">
-
+        {{ form_start(form) }}
           <h3 class="inserisciDatiPers">Dati Personali:</h3>
 
            <div class="ad_pers_dati">
@@ -19,7 +17,6 @@
 
             <div class="ad_pers_dati">
               <input class="ad_input" type="text" name="cognome" class="input" placeholder="Cognome">
-              {{ form_row(form., {'attr': {'class': 'ad_input'}})}}
             </div>
 
             <div class="ad_pers_dati">
@@ -41,14 +38,12 @@
             <div class="ad_pers_cerca">
               <button class="ad_button">Salva</button>
             </div>
-{{ form_end(form) }}
-        </form>
+        {{ form_end(form) }}
 
-      </div> <!-- admin_pers -->
+        </div> <!-- admin_pers -->
 
-      <div class="admin_add">
-
-         <div id="group_ad">
+        <div class="admin_add">
+            <div id="group_ad">
 
           <form action="/" method="POST" name="inserimento-dati">
 

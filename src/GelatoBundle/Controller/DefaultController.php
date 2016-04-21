@@ -5,6 +5,10 @@ namespace GelatoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
+use GelatoBundle\Entity\Gelateria;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use GelatoBundle\Form\GelateriaType;
 
 class DefaultController extends Controller
 {
@@ -18,11 +22,29 @@ class DefaultController extends Controller
         return $this->render('GelatoBundle:Default:utente.html.twig');
     }
 
-    public function amministratoreAction()
+    public function amministratoreAction(Request $request)
     {
-        return $this->render('GelatoBundle:Default:amministratore.html.twig');
-    }
+        $gelateria = new Gelateria();
 
+        $form = $this->createForm(GelateriaType::class, $gelateria);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // Salvo cose.
+            $gelateria = $form->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($gelateria);
+            $em->flush();
+            $this->addFlash(
+                'notice',
+                'Gelateria creata con successo'
+            );
+            //return $this->redirectToRoute('_create');
+        }
+
+        return $this->render('GelatoBundle:Default:amministratore.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
     public function contattiAction()
     {
         return $this->render('GelatoBundle:Default:contatti.html.twig');
@@ -37,7 +59,7 @@ class DefaultController extends Controller
     {
         return $this->render('GelatoBundle:Default:risultatiroot.html.twig');
     }
-    
+
     public function registrazioneAction()
     {
         return $this->render('GelatoBundle:Default:registrazione.html.twig');

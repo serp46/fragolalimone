@@ -75,5 +75,28 @@ class GelateriaController extends Controller
         ));
     }
 
+    public function amministratoreAction(Request $request)
+    {
+        $gelateria = new Gelateria();
+
+        $form = $this->createForm(GelateriaType::class, $gelateria);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            // Salvo cose.
+            $gelateria = $form->getData();
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($gelateria);
+            $em->flush();
+            $this->addFlash(
+                'notice',
+                'Gelateria creata con successo'
+            );
+            //return $this->redirectToRoute('_create');
+        }
+
+        return $this->render('GelatoBundle:Gelateria:amministratore.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
 
 }
