@@ -38,3 +38,7 @@ edit:
 delete:
     path:     /delete
     defaults: { _controller: GelatoBundle:Gelateria:delete }
+
+list:
+    path:     /list
+    defaults: {_controller: GelatoBundle:Gusti:list}

@@ -1,10 +1,12 @@
 {% extends "::base.html.twig" %}
 
-{% block title %}Fragola & Limone - Home{% endblock %}
+{% block title %}GelatoBundle:Gusti:list{% endblock %}
 
 {% block body %}
 
-  <div class="box">
+{% for Gusto in gusti %}
+
+<div class="box">
 
     <div class="brand">
        <a href="/"><img src="{{asset('img/logo_completo.png')}}" alt="logo"></a>
@@ -42,7 +44,7 @@
 {{ form_end(form) }}
 
 
-</div>
+{% endfor %}
 
 
 {% endblock %}
