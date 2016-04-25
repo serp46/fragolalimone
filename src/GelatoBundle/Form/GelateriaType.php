@@ -2,9 +2,11 @@
 
 namespace GelatoBundle\Form;
 
+use GelatoBundle\Entity\Gelateria;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
@@ -37,9 +39,9 @@ class GelateriaType extends AbstractType
             ->add('sunday', ChoiceType::class)
             ->add('gusti', EntityType::class, [
                 'class' => 'GelatoBundle:Gusto',
-                'choice_label' => 'name'
-            ])
-        ;
+                'choice_label' => 'name'])
+            ->add('save', SubmitType::class, array('label' => 'Aggiungi'))
+            ->getForm();
     }
 
     /**

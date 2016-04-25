@@ -38,7 +38,7 @@ class DefaultController extends Controller
                 'notice',
                 'Gelateria creata con successo'
             );
-            //return $this->redirectToRoute('_create');
+            return $this->redirectToRoute('lista_gelaterie');
         }
 
         return $this->render('GelatoBundle:Default:amministratore.html.twig', array(

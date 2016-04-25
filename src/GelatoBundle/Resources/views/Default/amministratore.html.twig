@@ -136,14 +136,9 @@
           {{ form_row(form.gusti, {'attr': {'class': "checkbox_area", 'type': "checkbox" }}) }}
         </div>
 
-
-        <div class="admin_aggiungi">
-          <button class="admin_button">Gusti</button>
-        </div>
-
-        <div class="admin_aggiungi">
-          <button class="admin_button">Aggiungi</button>
-        </div>
+          <div class="admin_aggiungi">
+            {{ form_row(form.save, {'attr': {'class': "admin_button", 'type': "submit" }}) }}
+          </div>
 
       {{ form_end(form) }}
 
@@ -264,7 +259,7 @@
                   <p>Tel.: 0271346720 <br> Chiusura: Martedì </p>
               </div>
                   <div class="cestino">
-                      <a href=""><img src="icons/cestino.png" alt="logo"></a>
+                      <img src="icons/cestino.png" alt="logo">
                   </div>
       </div>
 

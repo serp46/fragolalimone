@@ -5,7 +5,7 @@ namespace GelatoBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+//use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class GustoType extends AbstractType
 {

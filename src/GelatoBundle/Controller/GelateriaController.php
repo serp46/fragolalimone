@@ -36,7 +36,7 @@ class GelateriaController extends Controller
                 //return $this->redirectToRoute('_create');
             }
             return $this->render('GelatoBundle:Gelateria:create.html.twig', array(
-                'form' => $form->createView(),
+                'form' => $form->createView()
             ));
         }
 
