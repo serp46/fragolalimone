@@ -12,6 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 
 class GelateriaType extends AbstractType
@@ -30,13 +31,13 @@ class GelateriaType extends AbstractType
             ], array('label' => false))
             ->add('address', TextType::class, array('label' => false))
             ->add('phone', IntegerType::class, array('label' => false))
-            ->add('monday', ChoiceType::class)
-            ->add('tuesday', ChoiceType::class)
-            ->add('wednesday', ChoiceType::class)
-            ->add('thursday', ChoiceType::class)
-            ->add('friday', ChoiceType::class)
-            ->add('saturday', ChoiceType::class)
-            ->add('sunday', ChoiceType::class)
+            ->add('monday', CheckboxType::class)
+            ->add('tuesday', CheckboxType::class)
+            ->add('wednesday', CheckboxType::class)
+            ->add('thursday', CheckboxType::class)
+            ->add('friday', CheckboxType::class)
+            ->add('saturday', CheckboxType::class)
+            ->add('sunday', CheckboxType::class)
             ->add('gusti', EntityType::class, [
                 'class' => 'GelatoBundle:Gusto',
                 'choice_label' => 'name'])
