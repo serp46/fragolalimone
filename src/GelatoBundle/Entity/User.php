@@ -45,6 +45,7 @@ class User extends BaseUser
      * @ORM\JoinColumn(name="citta_id", referencedColumnName="id")
      */
     private $citta;
+
     /**
      * @var string
      *
@@ -53,16 +54,18 @@ class User extends BaseUser
      */
     private $ricerche;
 
-
     /**
      *
      * @ORM\OneToMany(targetEntity="Ricerca", mappedBy="utenti")
      */
-     private $utenti;
-     public function __construct() {
+    private $utenti;
+
+    public function __construct() {
          parent::__construct();
          $this->ricerche = new ArrayCollection();
-     }
+    }
+
+
     /**
      * Get id
      *

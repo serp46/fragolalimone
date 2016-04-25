@@ -14,7 +14,7 @@ class GelateriaController extends Controller
 {
 
 	    /**
-         * @Route("/amministratore/list", name="elenco_gelaterie")
+         * @Route("/amministratore/list", name="list")
          */
         public function listAction()
         {
@@ -25,12 +25,12 @@ class GelateriaController extends Controller
             return $this->render('GelatoBundle:Gelateria:list.html.twig', array(
                 'elenco' => $elenco
             ));
-            //return $this->redirectToRoute('elenco_gelaterie');
+            //return $this->redirectToRoute('list');
         }
         
 
         /**
-         * @Route("/amministratore/create", name="_creategelateria")
+         * @Route("/amministratore/create", name="create")
          */
         public function createAction(Request $request)
         {
@@ -77,7 +77,7 @@ class GelateriaController extends Controller
                     'notice',
                     'Gelateria creata con successo'
                 );
-                return $this->redirectToRoute('elenco_gelaterie');
+                return $this->redirectToRoute('create');
             }
             return $this->render('GelatoBundle:Gelateria:create.html.twig', array(
                 'form' => $form->createView()
@@ -85,7 +85,7 @@ class GelateriaController extends Controller
         }
 
         /**
-         * @Route("/gelateria/{id}/edit", name="_editgelateria")
+         * @Route("/gelateria/{id}/edit", name="edit")
          */
         public function editAction(Request $request)
         {
@@ -108,10 +108,13 @@ class GelateriaController extends Controller
                 return $this->redirectToRoute('_editgelateria');
             }
             return $this->render('GelatoBundle:Gelateria:editgel.html.twig', array(
-                'form' => $form->createView(),
+                'form' => $form->createView()
             ));
         }
-
+        
+        /**
+         * @Route("/gelateria/{id}/edit", name="delete")
+         */
         public function deleteAction()
         {
             return $this->render('GelatoBundle:Gelateria:delete.html.twig', array(
