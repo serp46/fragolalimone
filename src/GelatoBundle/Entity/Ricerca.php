@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 use GelatoBundle\Entity\Citta;
 use GelatoBundle\Entity\Gusto;
 
+
 /**
  * Ricerca
  *

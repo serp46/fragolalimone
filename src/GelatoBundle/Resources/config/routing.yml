@@ -20,21 +20,29 @@ gelato_risultati:
     defaults: { _controller: GelatoBundle:Default:risultati }
 
 gelato_risultatiroot:
-        path:     /risultatiroot
-        defaults: { _controller: GelatoBundle:Default:risultatiroot }
+    path:     /risultatiroot
+    defaults: { _controller: GelatoBundle:Default:risultatiroot }
 
 gelato_registrazione:
-        path:     /registrazione
-        defaults: { _controller: GelatoBundle:Default:registrazione }
+    path:     /registrazione
+    defaults: { _controller: GelatoBundle:Default:registrazione }
+
+list:
+    path:     /amministratore/list
+    defaults: { _controller: GelatoBundle:Gelateria:list }
 
 create:
-    path:     /create
+    path:     /amministratore/create
     defaults: { _controller: GelatoBundle:Gelateria:create }
 
 edit:
-    path:     /edit
+    path:     /amministratore/edit
     defaults: { _controller: GelatoBundle:Gelateria:edit }
 
 delete:
-    path:     /delete
+    path:     /amministratore/delete
     defaults: { _controller: GelatoBundle:Gelateria:delete }
+
+list:
+    path:     /gusti/list
+    defaults: {_controller: GelatoBundle:Gusti:list }

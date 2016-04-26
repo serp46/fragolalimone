@@ -1,0 +1,50 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}GelatoBundle:Gusti:list{% endblock %}
+
+{% block body %}
+
+{% for Gusto in gusti %}
+
+<div class="box">
+
+    <div class="brand">
+       <a href="/"><img src="{{asset('img/logo_completo.png')}}" alt="logo"></a>
+    </div>
+
+      <h2 class="home_payoff">"Il tuo Gelato in un click"</h2>
+
+       {{ form_start(gusti) }}
+
+          <div class="button">
+          <label for="Gusto1" class="titolo1">Gusto 1</label><br>
+           
+            {{ form_row(gusti.name, {'attr': {'class': "checkbox_area", 'type': "checkbox" }}) }}
+          
+          </div>
+
+          <div class="button">
+          <label for="Gusto2">Gusto 2</label><br>
+            <select class="home_gusti" name="gusto2">
+          
+            </select>
+          </div>
+
+          <div class="button">
+          <label for="Gusto3">Gusto 3</label><br>
+            <select class="home_gusti" name="gusto3">
+              
+            </select>
+          </div>
+            <div class="cerca"> <!-- div o no? -->
+            <button class="home_cerca">Cerca</button>
+            </div>
+        </form>
+
+{{ form_end(form) }}
+
+
+{% endfor %}
+
+
+{% endblock %}

@@ -1,0 +1,48 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}GelatoBundle:Gelateria:list{% endblock %}
+
+{% block body %}
+    
+<div class="box_risultati">
+
+      <div class="ricerca">
+
+      <h3 class="titolo_ricerca">Ricerca Avanzata:</h3>
+
+        <div class="barrainfo">
+          <input class="campi_ricerca" type="text" name="email" class="input" placeholder="Nome Gelateria">
+        </div>
+
+        <div class="barrainfo">
+          <input class="campi_ricerca" type="text" name="email" class="input" placeholder="Città">
+        </div>
+
+        <div class="admin_aggiungi">
+          <button class="admin_button">Cerca</button>
+        </div>
+
+      </div> <!-- ricerca-->
+
+{% for gelateria in elenco %}
+
+    <div class="risultati">
+      <div class="row">
+        <h2 class="name">{{ gelateria.id }} {{ gelateria.name }}<br>
+          <p class="indirizzo">{{ gelateria.address }} {{ gelateria.city }}</p>
+        </h2>
+      <div class="info">
+        <p>Tel.: {{ gelateria.phone }} <br> Chiusura: Martedì </p>
+      </div>
+      <div class="cestino">
+        <a href=""><img src="icons/cestino.png" alt="cestino"></a>
+      </div>
+    </div>
+
+  </div> <!-- risultati -->
+
+</div> <!-- box_risultati -->
+
+{% endfor %}
+
+{% endblock %}

@@ -12,47 +12,53 @@ use GelatoBundle\Form\GelateriaType;
 
 class GelateriaController extends Controller
 {
-    /**
-         * @Route("/newgelateria", name="_creategelateria")
+        
+        /**
+         * @Route("/amministratore/create", name="create")
          */
         public function createAction(Request $request)
         {
             $gelateria = new Gelateria();
+
             if (!$gelateria) {
                 throw new NotFoundHttpException();
             }
             $form = $this->createForm(GelateriaType::class, $gelateria);
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
-                // Salvo cose.
-                $gelateria = $form->getData();
+                // Get Data
                 $em = $this->getDoctrine()->getManager();
+
                 $em->persist($gelateria);
                 $em->flush();
                 $this->addFlash(
                     'notice',
                     'Gelateria creata con successo'
                 );
-                //return $this->redirectToRoute('_create');
+                return $this->redirectToRoute('create');
             }
+
+            $gelaterie = $this->getDoctrine()->getRepository('GelatoBundle:Gelateria')->findAll();
+
             return $this->render('GelatoBundle:Gelateria:create.html.twig', array(
                 'form' => $form->createView(),
+                'elenco' => $gelaterie, 
             ));
         }
 
         /**
-         * @Route("/gelateria/{id}/edit", name="_editgelateria")
+         * @Route("/gelateria/{id}/edit", name="edit")
          */
         public function editAction(Request $request)
         {
-            $gelateria = $this->getDoctrine()->getRepository('FrontBundle:Gelateria')->find($request->get('id'));
+            $gelateria = $this->getDoctrine()->getRepository('GelatoBundle:Gelateria')->find($request->get('id'));
             if (!$gelateria) {
                 throw new NotFoundHttpException();
             }
             $form = $this->createForm(GelateriaFormType::class, $gelateria);
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
-                // Salvo cose.
+                // Get Data
                 $gelateria = $form->getData();
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($gelateria);
@@ -61,42 +67,21 @@ class GelateriaController extends Controller
                     'notice',
                     'Gelateria modificata con successo'
                 );
-                return $this->redirectToRoute('_rotta');
+                return $this->redirectToRoute('_editgelateria');
             }
             return $this->render('GelatoBundle:Gelateria:editgel.html.twig', array(
                 'form' => $form->createView(),
             ));
         }
-
-    public function deleteAction()
-    {
-        return $this->render('GelatoBundle:Gelateria:delete.html.twig', array(
+        
+        /**
+         * @Route("/gelateria/{id}/edit", name="delete")
+         */
+        public function deleteAction()
+        {
+            return $this->render('GelatoBundle:Gelateria:delete.html.twig', array(
             // ...
         ));
-    }
-
-    public function amministratoreAction(Request $request)
-    {
-        $gelateria = new Gelateria();
-
-        $form = $this->createForm(GelateriaType::class, $gelateria);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            // Salvo cose.
-            $gelateria = $form->getData();
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($gelateria);
-            $em->flush();
-            $this->addFlash(
-                'notice',
-                'Gelateria creata con successo'
-            );
-            //return $this->redirectToRoute('_create');
         }
-
-        return $this->render('GelatoBundle:Gelateria:amministratore.html.twig', array(
-            'form' => $form->createView(),
-        ));
-    }
 
 }

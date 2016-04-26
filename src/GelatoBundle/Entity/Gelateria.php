@@ -411,6 +411,20 @@ class Gelateria
     }
 
     /**
+     * Set gusti
+     *
+     * @param integer $gusti
+     *
+     * @return Gelateria
+     */
+    public function setGusti($gusti)
+    {
+        $this->gusti = $gusti;
+
+        return $this;
+    }
+
+    /**
      * Remove gusti
      *
      * @param \GelatoBundle\Entity\Gusto $gusti

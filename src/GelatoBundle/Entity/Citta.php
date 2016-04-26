@@ -9,7 +9,6 @@ use GelatoBundle\Entity\User;
 use GelatoBundle\Entity\Gelateria;
 use Doctrine\Common\Collections\ArrayCollection;
 
-
 /**
  * Citta
  *
@@ -39,27 +38,30 @@ class Citta
      * @ORM\ManyToOne(targetEntity="Provincia", inversedBy="citta")
      * @ORM\JoinColumn(name="provincia_id", referencedColumnName="id")
      */
-    private $provincia;
+    private $province;
 
     /**
      *
      * @ORM\OneToMany(targetEntity="Ricerca", mappedBy="citta")
      */
     private $ricerche;
-       /**
-        *
-        * @ORM\OneToMany(targetEntity="User", mappedBy="citta")
-        */
+
+    /**
+    *
+    * @ORM\OneToMany(targetEntity="User", mappedBy="citta")
+    */
     private $utenti;
-       /**
-        *
-        * @ORM\OneToMany(targetEntity="Gelateria", mappedBy="citta")
-        */
- private $gelaterie;
-    public function __construct() {
+
+    /**
+    *
+    * @ORM\OneToMany(targetEntity="Gelateria", mappedBy="citta")
+    */
+   private $gelaterie;
+     public function __construct() {
         $this->utenti = new ArrayCollection();
         $this->ricerche = new ArrayCollection();
         $this->gelaterie = new ArrayCollection();
+        $this->province = new ArrayCollection();
    }
 
 

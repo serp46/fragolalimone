@@ -22,29 +22,11 @@ class DefaultController extends Controller
         return $this->render('GelatoBundle:Default:utente.html.twig');
     }
 
-    public function amministratoreAction(Request $request)
+    public function amministratoreAction()
     {
-        $gelateria = new Gelateria();
-
-        $form = $this->createForm(GelateriaType::class, $gelateria);
-        $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
-            // Salvo cose.
-            $gelateria = $form->getData();
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($gelateria);
-            $em->flush();
-            $this->addFlash(
-                'notice',
-                'Gelateria creata con successo'
-            );
-            //return $this->redirectToRoute('_create');
-        }
-
-        return $this->render('GelatoBundle:Default:amministratore.html.twig', array(
-            'form' => $form->createView(),
-        ));
+        return $this->render('GelatoBundle:Default:amministratore.html.twig');
     }
+        
     public function contattiAction()
     {
         return $this->render('GelatoBundle:Default:contatti.html.twig');
