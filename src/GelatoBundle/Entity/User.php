@@ -52,7 +52,7 @@ class User extends BaseUser
      * @ORM\OneToOne(targetEntity="Ricerca")
      * @ORM\JoinColumn(name="utente_id", referencedColumnName="id")
      */
-    private $ricerche;
+    private $ricerca;
 
     /**
      *
