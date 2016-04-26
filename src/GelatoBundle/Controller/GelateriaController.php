@@ -12,23 +12,7 @@ use GelatoBundle\Form\GelateriaType;
 
 class GelateriaController extends Controller
 {
-
-	    /**
-         * @Route("/amministratore/list", name="list")
-         */
-        public function listAction()
-        {
-            $elenco = $this->getDoctrine()
-                ->getRepository('GelatoBundle:Gelateria')
-                ->findAll();
-
-            return $this->render('GelatoBundle:Gelateria:list.html.twig', array(
-                'elenco' => $elenco
-            ));
-            //return $this->redirectToRoute('list');
-        }
         
-
         /**
          * @Route("/amministratore/create", name="create")
          */
@@ -43,32 +27,6 @@ class GelateriaController extends Controller
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
                 // Get Data
-                $gelateria = $form['name']->getData();
-                $gelateria = $form['city']->getData();
-                $gelateria = $form['address']->getData();
-                $gelateria = $form['phone']->getData();
-                $gelateria = $form['monday']->getData();
-                $gelateria = $form['tuesday']->getData();
-                $gelateria = $form['wednesday']->getData();
-                $gelateria = $form['thursday']->getData();
-                $gelateria = $form['friday']->getData();
-                $gelateria = $form['saturday']->getData();
-                $gelateria = $form['sunday']->getData();
-                $gelateria = $form['gusti']->getData();
-
-                $gelateria->setName($name);
-                $gelateria->setCity($city);
-                $gelateria->setAddress($address);
-                $gelateria->setPhone($phone);
-                $gelateria->setMonday($monday);
-                $gelateria->setTuesday($tuesday);
-                $gelateria->setWednesday($wednesday);
-                $gelateria->setThursday($thursday);
-                $gelateria->setFriday($friday);
-                $gelateria->setSaturday($saturday);
-                $gelateria->setSunday($sunday);
-                $gelateria->setGusti($gusti);
-
                 $em = $this->getDoctrine()->getManager();
 
                 $em->persist($gelateria);
@@ -79,8 +37,12 @@ class GelateriaController extends Controller
                 );
                 return $this->redirectToRoute('create');
             }
+
+            $gelaterie = $this->getDoctrine()->getRepository('GelatoBundle:Gelateria')->findAll();
+
             return $this->render('GelatoBundle:Gelateria:create.html.twig', array(
-                'form' => $form->createView()
+                'form' => $form->createView(),
+                'elenco' => $gelaterie, 
             ));
         }
 
@@ -108,7 +70,7 @@ class GelateriaController extends Controller
                 return $this->redirectToRoute('_editgelateria');
             }
             return $this->render('GelatoBundle:Gelateria:editgel.html.twig', array(
-                'form' => $form->createView()
+                'form' => $form->createView(),
             ));
         }
         

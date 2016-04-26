@@ -4,42 +4,50 @@
 
 {% block body %}
 
-  <div class="box">
+<div class="box">
 
     <div class="brand">
-       <a href="/"><img src="{{asset('img/logo_completo.png')}}" alt="logo"></a>
+       <a href="/"><img src="{{ asset('img/logo_completo.png') }}" alt="logo"></a>
     </div>
+
+    <form class="home_form">
 
       <h2 class="home_payoff">"Il tuo Gelato in un click"</h2>
 
-       {{ form_start(gusti) }}
-
           <div class="button">
           <label for="Gusto1" class="titolo1">Gusto 1</label><br>
-           
-            {{ form_row(gusti.name, {'attr': {'class': "checkbox_area", 'type': "checkbox" }}) }}
-          
+            <select class="home_gusti" name="gusto1">
+              <option>Arancia</option>
+              <option>Ananas</option>
+              <option>Banana</option>
+              <option>Cioccolato</option>
+            </select>
           </div>
 
           <div class="button">
-          <label for="Gusto2">Gusto 2</label><br>
+          <label for="Gusto2" class="">Gusto 2</label><br>
             <select class="home_gusti" name="gusto2">
-          
+              <option>Arancia</option>
+              <option>Ananas</option>
+              <option>Banana</option>
+              <option>Cioccolato</option>
             </select>
           </div>
 
           <div class="button">
-          <label for="Gusto3">Gusto 3</label><br>
-            <select class="home_gusti" name="gusto3">
-              
+          <label for="Gusto3" class="titolo1">Gusto 3</label><br>
+            <select class="home_gusti" name="gusto3"> 
+              <option>Arancia</option>
+              <option>Ananas</option>
+              <option>Banana</option>
+              <option>Cioccolato</option> 
             </select>
           </div>
-            <div class="cerca"> <!-- div o no? -->
+          
+          <div class="cerca"> 
             <button class="home_cerca">Cerca</button>
-            </div>
-        </form>
-
-{{ form_end(form) }}
+          </div>
+    </form>
 
 
 </div>

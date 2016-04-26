@@ -4,7 +4,7 @@
 
 {% block body %}
 
-     <div class="Buttons largo100">
+     <div class="Buttons">
 
     <div class="admin_personal">
 
@@ -169,19 +169,21 @@
 
     <div class="risultati">
 
-
+{% for gelateria in elenco %}
 
     <div class="row">
-      <h2 class="name">Bandirali<br>
-        <p class="indirizzo">Via Marco Tullio, 8, Milano</p>
+      <h2 class="name">{{ gelateria.name }}<br>
+        <p class="indirizzo">{{ gelateria.address }}, {{ gelateria.city }}</p>
       </h2>
         <div class="info">
-          <p>Tel.: 0271346720 <br> Chiusura: Martedì </p>
+          <p>{{ gelateria.phone }} <br> Giorni </p>
         </div>
         <div class="cestino">
           <a href=""><img src="icons/cestino.png" alt="logo"></a>
         </div>
     </div>
+
+{% endfor %}
 
    
 
