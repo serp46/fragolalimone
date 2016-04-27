@@ -7,6 +7,7 @@
         {% block stylesheets %}
         <link type="text/css" href="{{ asset('css/reset.css') }}" rel="stylesheet">
         <link type="text/css" href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
         {% endblock %}
 
@@ -20,18 +21,22 @@
         {% block nav %}
             <nav class="navbar">
                 <ul class="navigation">
-                    <li class="left"><a id='login_modal' data-toggle="modal" data-target="#myModal" href="">Login</a></li>
+                    <li class="left"><a type="button" id="modal_trigger" data-target="#modal" data-toggle="modal" href="/login" class="btn">Login</a></li>
                     <li class="logo"><a href="{{ url('gelato_homepage') }}"><img src="img/pittogramma.png" alt="logo"></a></li>
                     <li class="right"><a href="{{ url('gelato_contatti') }}">Contatti</a></li>
                 </ul>
             </nav>
+             <div id="modal" class="modal hide fade">
+            
+        </div>
         {% endblock %}
 
         {% block body %}
         {% endblock %}
 
+       
+
         {% block javascripts %}
-        <script type="text/javascript" src="{{ asset('js/jquery-1.11.0.min.js') }}"></script>
         {% endblock %}
         
     </body>

@@ -1,19 +1,19 @@
-<!-- <a id="modal_trigger" href="#modal" class="btn">Click here to Login or register</a> -->
-
-{% trans_default_domain 'FOSUserBundle' %}
 {% block fos_user_content %}
 
+{% block stylesheets %}
 
-<div id="myModal" class="popupContainer" style="display:none;">
+<link type="text/css" href="{{ asset('css/popup.css') }}" rel="stylesheet">
+
+{% endblock %}
+
+
+<div id="modal" class="popupContainer" style="display:none;">
 	<header class="popupHeader">
 		<span class="header_title">Login</span>
 		<span class="modal_close"><i class="fa fa-times"></i></span>
 	</header>
  
     <section class="popupBody">
-    <! -- Here Goes all the Login and signup Forms -->
-    </section>
-</div>
 
 <div class="social_login">
     <div class="clearfix">
@@ -39,29 +39,33 @@
 </div>
 
 <div class="user_login">
-    <form>
-        <label>Email / Username</label> <input type="text"><br>
-        <label>Password</label> <input type="password"><br>
- 
-        <div class="checkbox">
-            <input id="remember" type="checkbox"> <label for=
-            "remember">Remember me on this computer</label>
-        </div>
- 
-        <div class="action_btns">
+    <form action="{{ path("fos_user_security_check") }}" method="post">
+     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+
+       <label for="username">{{ 'security.login.username'|trans }}</label>
+    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+
+       <label for="password">{{ 'security.login.password'|trans }}</label>
+    <input type="password" id="password" name="_password" required="required" />
+
+
+       <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
+
+     <input type="submit" class="one_half last" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+
+       <!--  <div class="action_btns">
             <div class="one_half">
                 <a class="btn back_btn" href="#">Back</a>
             </div>
- 
-            <div class="one_half last">
-                <a class="btn btn_red" href="#">Login</a>
-            </div>
+  -->
+            
         </div>
     </form>
     
     <a class="forgot_password" href="#">Forgot password?</a>
 </div>
-
+<!-- 
     <form>
         <label>Full Name</label> <input type="text"><br>
         <label>Email Address</label> <input type="email"><br>
@@ -81,7 +85,16 @@
                 <a class="btn btn_red" href="#">Register</a>
             </div>
         </div>
-    </form>
+    </form> -->
+</div>
+
+    </section>
 </div>
 
 {% endblock fos_user_content %}
+
+
+
+
+
+
