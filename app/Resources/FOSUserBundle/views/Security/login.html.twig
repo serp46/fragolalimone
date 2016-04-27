@@ -1,6 +1,6 @@
-<!DOCTYPE html>
- <html>
-  <head>
+<html>
+<head>
+{% block stylesheets %}
         <meta charset="UTF-8"/>
         <link type="text/css" href="{{ asset('css/reset.css') }}" rel="stylesheet">
         <link type="text/css" href="{{ asset('css/style.css') }}" rel="stylesheet">
@@ -8,12 +8,15 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
-  </head>
+{% endblock %}
+</head>
    
 <body class="sfondogelato">
 
 {% trans_default_domain 'FOSUserBundle' %}
+
 {% block fos_user_content %}
+
 {% if error %}
     <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
 {% endif %}
@@ -38,7 +41,7 @@
     <form action="{{ path("fos_user_security_check") }}" method="post">
       <div class="compilazione">
 
-       <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+       <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" placeholder="Password" />
          <label for="username">{{ 'security.login.username'|trans }}</label>
        
        <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
@@ -50,21 +53,7 @@
          <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
 
        <input type="submit" class="one_half last" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
-
-    
-       <!-- <input class="registrazione_input" type="text" name="nome" class="input" placeholder="Nickname">
-            </div>
-
-            <div class="compilazione">
-                <input class="registrazione_input" type="text" name="cognome" placeholder="Password"/>
-            </div> 
-
-            <div class="conferma">
-                <button class="pulsante">Conferma</button>
-            </div>
-
-            <p>Password dimenticata?</p> -->
-        </form>
+    </form>
 
         </div>
 
@@ -72,4 +61,3 @@
 {% endblock fos_user_content %}
 
 </body>
-</html>
