@@ -38,25 +38,32 @@ div {
 }
 
 h1 {
-font-size: 1.8em;
+font-size: 2em;
+font-weight: bold;
 }
 
 h2{
 font-size: 1.4em;
+font-weight: bold;
 }
 
 h3{
 font-size: 1em;
+font-weight: bold;
 }
 
 h4{
 font-size: 0.8em;
+font-weight: bold;
 }
 
-button{
-margin: auto;
+.pulsante{
+margin: 5px;
+height: 30px;
+width: 80px;
 background-color: rgba(0, 0, 0, 0.7);
 font-size: 1.0em;
+padding: 5px 10px;
 color: white;
 border: none;
 border-radius: 10px;
@@ -190,24 +197,6 @@ font-family: 'Shadows Into Light', cursive;
   font-size: 1em;
 }
 
-.home_cerca {
-  background-color: rgba(0, 0, 0, 0.7);
-  margin: auto;
-  display: block;
-  width: 70px;
-  height: 50px;
-  border-radius: 10px;
-  color: white;
-  font-size: 1.5em;
-  position: relative;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  border-style: none;
-  font-family: 'Shadows Into Light', cursive;
-}
-
-
-
 .login {
   background-color: rgba(0, 0, 0, 0.7);
   margin: auto;
@@ -244,7 +233,6 @@ font-family: 'Shadows Into Light', cursive;
 
 .titolo_contatti {
   margin-top: 80px;
-  font-size: 2em;
 }
 
 /* ----------------------- REGISTRAZIONE ------------------------- */
@@ -313,9 +301,6 @@ font-family: 'Shadows Into Light', cursive;
     top: 275px;
 }
 
-.box h1 {
-    font-size: 4em;
-}
 
 .box p {
     font-size: 1.5em;
@@ -391,6 +376,9 @@ font-family: 'Shadows Into Light', cursive;
   height: 90%;
   color: black;
 }
+.lista_gusti{
+    margin: 10px;
+}
 
 .list_ads {
   display: block;
@@ -409,17 +397,6 @@ font-family: 'Shadows Into Light', cursive;
   width: 13vw;
   height: 25px;
   margin-top: 5px;
-}
-
- .ad_button {
-  background-color: rgba(0, 0, 0, 0.7);
-  margin: 10px auto;
-  width: 60px;
-  height: 40px;
-  border-radius: 5px;
-  color: white;
-  font-size: 0.9em;
-  border-style: none;
 }
 
 .ad_pers_dati {
@@ -574,17 +551,6 @@ font-family: 'Shadows Into Light', cursive;
 
 /* ----------------------- PAUL ------------------------- */
 
-
-.pulsante {
-  margin: auto;
-  background-color: rgba(0, 0, 0, 0.6);
-  font-size: 1.5em;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-family: 'Shadows Into Light', cursive;
-}
-
 .overflow {
   overflow: auto;
 }
@@ -664,16 +630,14 @@ label {
   color: black;
 }
 
-.Cerca {
+.cont_cerca {
   width: 30%;
   height: 50px;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(0, 0, 0, 0.4);
   text-align: center;
-  padding-top: 15px;
-}
+ }
 
 .Buttons {
   background: rgba(0, 0, 0, 0.6);
@@ -763,16 +727,6 @@ margin-bottom: 50px;
   line-height: 30px;
 }
 
-.datiaccesso input[type=submit] {
-  margin-top: 38px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-size: 0.9em;
-  border: none;
-  border-radius: 10px;
-  width: 70px;
-  height: 25px;
-}
 
 .datiaccesso input[type=text] {
   width: 150px;
@@ -813,10 +767,10 @@ margin: 5px;
 
 /* Importing Google Webfonts */
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,700italic,400italic);
- 
+
 body {
-    font-family: 'Source Sans Pro', sans-serif; 
-    font-size: 14px; 
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 14px;
     color: #666;
 }
 
@@ -831,7 +785,7 @@ body {
     background: #000;
     display: none;
 }
- 
+
 /* Modal box or Popup box */
 .popupContainer{
   position:absolute;
@@ -847,41 +801,41 @@ body {
      width: 100px;
      display: block;
 }
- 
+
 .btn  {
     padding: 10px 20px;
      background:  #F4F4F2;
 }
- 
+
 .btn_red  {
     background:  #ED6347;
      color:  #FFF;
 }
- 
+
 .btn:hover  {
     background:  #E4E4E2;
 }
- 
+
 .btn_red:hover  {
     background:  #C12B05;
 }
- 
+
 a.btn  {
     color: #666;
      text-align:  center;
      text-decoration:  none;
 }
- 
+
 a.btn_red  {
     color:  #FFF;
 }
- 
+
 .one_half  {
     width: 50%;
      display:  block;
      float: left;
 }
- 
+
 .one_half.last  {
     width: 45%;
      margin-left: 5%;
@@ -892,7 +846,7 @@ a.btn_red  {
     font-size: 16px;
      text-transform:  uppercase;
 }
- 
+
 .popupHeader  {
     background: #F4F4F2;
      position: relative;
@@ -900,7 +854,7 @@ a.btn_red  {
      border-bottom: 1px solid #DDD;
      font-weight: bold;
 }
- 
+
 .popupHeader .modal_close  {
     position:  absolute;
      right:  0;
@@ -911,12 +865,12 @@ a.btn_red  {
      color: #aaa;
      font-size: 16px;
 }
- 
+
 .popupBody  {
     padding: 20px;
 }
 
- 
+
 .social_login .social_box  {
     display: block;
      clear: both;
@@ -925,7 +879,7 @@ a.btn_red  {
      background:  #F4F4F2;
      overflow:  hidden;
 }
- 
+
 .social_login .icon  {
     display: block;
      width: 10px;
@@ -936,15 +890,15 @@ a.btn_red  {
      font-size: 16px;
      text-align:  center;
 }
- 
+
 .social_login .fb .icon  {
     background: #3B5998;
 }
- 
+
 .social_login .google .icon  {
     background: #DD4B39;
 }
- 
+
 .social_login .icon_title  {
     display: block;
      padding: 5px 0;
@@ -953,11 +907,11 @@ a.btn_red  {
      font-size:  16px;
      color: #777;
 }
- 
+
 .social_login .social_box:hover  {
     background:  #E4E4E2;
 }
- 
+
 .centeredText  {
     text-align:  center;
      margin:  20px 0;
@@ -965,12 +919,12 @@ a.btn_red  {
      overflow:  hidden;
      text-transform:  uppercase;
 }
- 
+
 .action_btns  {
     clear: both;
      overflow:  hidden;
 }
- 
+
 .action_btns a  {
     display:  block;
 }
@@ -978,12 +932,12 @@ a.btn_red  {
 .user_login  {
     display:  none;
 }
- 
+
 .user_login label  {
     display:  block;
      margin-bottom: 5px;
 }
- 
+
 .user_login input[type="text"],  .user_login input[type="email"],  .user_login input[type="password"]  {
     display:  block;
      width: 90%;
@@ -991,23 +945,23 @@ a.btn_red  {
      border: 1px solid #DDD;
      color: #666;
 }
- 
+
 .user_login input[type="checkbox"]  {
     float: left;
      margin-right: 5px;
 }
- 
+
 .user_login input[type="checkbox"]+label  {
     float: left;
 }
- 
- 
+
+
 .user_login .checkbox  {
     margin-bottom:  10px;
      clear:  both;
      overflow:  hidden;
 }
- 
+
 .forgot_password  {
     display: block;
      margin:  20px 0 10px;
@@ -1020,12 +974,12 @@ a.btn_red  {
 .user_register  {
     display:  none;
 }
- 
+
 .user_register label  {
     display:  block;
      margin-bottom: 5px;
 }
- 
+
 .user_register input[type="text"],  .user_register input[type="email"],  .user_register input[type="password"]  {
     display:  block;
      width: 90%;
@@ -1033,17 +987,17 @@ a.btn_red  {
      border: 1px solid #DDD;
      color: #666;
 }
- 
+
 .user_register input[type="checkbox"]  {
     float: left;
      margin-right: 5px;
 }
- 
+
 .user_register input[type="checkbox"]+label  {
     float: left;
 }
- 
- 
+
+
 .user_register .checkbox  {
     margin-bottom:  10px;
      clear:  both;
