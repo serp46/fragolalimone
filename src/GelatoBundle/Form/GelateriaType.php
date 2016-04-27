@@ -42,7 +42,8 @@ class GelateriaType extends AbstractType
                 'class' => 'GelatoBundle:Gusto',
                 'choice_label' => 'name',
                 'multiple'=>true,
-                'expanded'=>true])
+                'expanded'=>true,
+                'label' => false])
             ->add('save', SubmitType::class, array('label' => 'Aggiungi'))
             ->getForm();
     }

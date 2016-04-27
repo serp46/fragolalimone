@@ -32,12 +32,13 @@
               <input class="ad_input" type="text" name="password" class="input" placeholder="Password">
             </div>
 
-            <div class="ad_mod">
-              <button class="ad_button">Modifica</button>
+            <!--<div class="ad_mod">
+              <button class="pulsante">Modifica</button>
             </div>
+        -->
 
             <div class="ad_pers_cerca">
-              <button class="ad_button">Salva</button>
+              <button class="pulsante">Salva</button>
             </div>
 
         </form>
@@ -108,7 +109,7 @@
             </div>
         </div>
 
-        <h4> Giorni di Chiusura </h4>
+        <h3> Giorni di Chiusura </h3>
         <div class="giorni_amministratore">
 
 
@@ -141,14 +142,16 @@
         </div>
         </div>
 
+        <h3>Gusti</h3>
+        <div class="lista_gusti">
         <div class="checkbox_area">
-          {{ form_row(form.gusti, {'attr': {'class': "checkbox_area", 'type': "checkbox" }}) }}
+        {{ form_row(form.gusti, {'attr': {'class': "checkbox_area", 'type': "checkbox" }}) }}
+        </div>
         </div>
 
 
-
           <div class="admin_aggiungi">
-            {{ form_row(form.save, {'attr': {'class': "admin_button", 'type': "submit" }}) }}
+            {{ form_row(form.save, {'attr': {'class': "pulsante", 'type': "submit" }}) }}
           </div>
 
 
@@ -172,7 +175,7 @@
         </div>
 
         <div class="admin_aggiungi">
-          <button class="admin_button">Cerca</button>
+          <button class="pulsante">Cerca</button>
         </div>
 
     </div> <!-- box_risultati -->
