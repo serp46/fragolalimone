@@ -38,7 +38,7 @@ class GelateriaController extends Controller
 
             $gelaterie = $this->getDoctrine()->getRepository('GelatoBundle:Gelateria')->findAll();
 
-            return $this->render('GelatoBundle:Gelateria:create.html.twig', array(
+            return $this->render('GelatoBundle:Default:amministratore.html.twig', array(
                 'form' => $form->createView(),
                 'elenco' => $gelaterie,
             ));
