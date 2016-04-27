@@ -26,6 +26,3 @@ gelato_registrazione:
     path:     /registrazione
     defaults: { _controller: GelatoBundle:Default:registrazione }
 
-login:
-    path:     /login
-    defaults: { _controller: GelatoBundle:Default:login}

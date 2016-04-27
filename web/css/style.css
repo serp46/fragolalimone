@@ -759,4 +759,28 @@ width: 60%;
 
 .datiutente input {
 margin: 5px;
+}
 
+.box_login {
+line-height: 100px;
+text-align: center;
+margin: 20px auto;
+}
+
+.box_login h2 {
+  font-size: 2.5em;
+}
+
+.conferma {
+  margin-top: 30px;
+}
+
+.conferma button {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 20%;
+  height: 30%;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.2em;
+  border-style: none;
+}
