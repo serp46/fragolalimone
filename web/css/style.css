@@ -47,11 +47,20 @@ font-size: 1.4em;
 
 h3{
 font-size: 1em;
-color: #fff;
 }
 
 h4{
 font-size: 0.8em;
+}
+
+button{
+margin: auto;
+background-color: rgba(0, 0, 0, 0.7);
+font-size: 1.0em;
+color: white;
+border: none;
+border-radius: 10px;
+font-family: 'Shadows Into Light', cursive;
 }
 
 .navbar {
@@ -347,7 +356,7 @@ font-size: 0.8em;
 }
 
 .admin_personal {
-  
+
   height: 90%;
   display: inline-block;
   text-align:center;
@@ -421,13 +430,6 @@ font-size: 0.8em;
   display: inline-block;
 }
 
-.ad_button {
-  font-family: 'Shadows Into Light', cursive;
-}
-
-.admin_button {
-  font-family: 'Shadows Into Light', cursive;
-}
 
 .box_aggiungi_gelateria {
   background: rgba(255, 255, 255, 0.9);
@@ -459,12 +461,6 @@ font-size: 0.8em;
   display: inline-block;
 }
 
-.admin_input {
-  border-radius: 5px;
-  width: 13vw;
-  height: 25px;
-  margin: 3px;
-}
 
 .admin_aggiungi {
   display: inline-block;
@@ -525,16 +521,7 @@ font-size: 0.8em;
   border-radius: 10px 10px 0 0;
 }
 
-.admin_button {
-  background-color: rgba(0, 0, 0, 0.9);
-  width: 6vw;
-  height: 3vh;
-  border-radius: 5px;
-  color: white;
-  font-size: 0.8em;
-  border-style: none;
-  margin-right: 5px;
-}
+
 
 .risultati {
   display: block;
