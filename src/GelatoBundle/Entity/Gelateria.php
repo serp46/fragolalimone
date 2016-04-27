@@ -55,49 +55,49 @@ class Gelateria
     /**
      * @var bool
      *
-     * @ORM\Column(name="monday", type="boolean", unique=true)
+     * @ORM\Column(name="monday", type="boolean", nullable=true)
      */
     private $monday;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="tuesday", type="boolean", unique=true)
+     * @ORM\Column(name="tuesday", type="boolean", nullable=true)
      */
     private $tuesday;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="wednesday", type="boolean", unique=true)
+     * @ORM\Column(name="wednesday", type="boolean", nullable=true)
      */
     private $wednesday;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="thursday", type="boolean", unique=true)
+     * @ORM\Column(name="thursday", type="boolean", nullable=true)
      */
     private $thursday;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="friday", type="boolean", unique=true)
+     * @ORM\Column(name="friday", type="boolean", nullable=true)
      */
     private $friday;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="saturday", type="boolean", unique=true)
+     * @ORM\Column(name="saturday", type="boolean", nullable=true)
      */
     private $saturday;
 
     /**
      * @var bool
      *
-     * @ORM\Column(name="sunday", type="boolean", unique=true)
+     * @ORM\Column(name="sunday", type="boolean", nullable=true)
      */
     private $sunday;
 

@@ -22,11 +22,35 @@ class DefaultController extends Controller
         return $this->render('GelatoBundle:Default:utente.html.twig');
     }
 
-    public function amministratoreAction()
+    public function amministratoreAction(Request $request)
     {
-        return $this->render('GelatoBundle:Default:amministratore.html.twig');
+
+        $gelateria = new Gelateria();
+
+        $form = $this->createForm(GelateriaType::class, $gelateria);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $gelateria = $form->getData();
+
+            // Get Data
+            $em = $this->getDoctrine()->getManager();
+
+            $em->persist($gelateria);
+            $em->flush();
+            $this->addFlash(
+                'notice',
+                'Gelateria creata con successo'
+            );
+        }
+
+        $gelaterie = $this->getDoctrine()->getRepository('GelatoBundle:Gelateria')->findAll();
+
+        return $this->render('GelatoBundle:Default:amministratore.html.twig', array(
+            'form' => $form->createView(),
+            'elenco' => $gelaterie,
+        ));
     }
-        
+
     public function contattiAction()
     {
         return $this->render('GelatoBundle:Default:contatti.html.twig');

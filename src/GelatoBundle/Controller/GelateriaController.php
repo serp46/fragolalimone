@@ -12,7 +12,7 @@ use GelatoBundle\Form\GelateriaType;
 
 class GelateriaController extends Controller
 {
-        
+
         /**
          * @Route("/amministratore/create", name="create")
          */
@@ -20,12 +20,11 @@ class GelateriaController extends Controller
         {
             $gelateria = new Gelateria();
 
-            if (!$gelateria) {
-                throw new NotFoundHttpException();
-            }
             $form = $this->createForm(GelateriaType::class, $gelateria);
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
+                $gelateria = $form->getData();
+
                 // Get Data
                 $em = $this->getDoctrine()->getManager();
 
@@ -35,14 +34,13 @@ class GelateriaController extends Controller
                     'notice',
                     'Gelateria creata con successo'
                 );
-                return $this->redirectToRoute('create');
             }
 
             $gelaterie = $this->getDoctrine()->getRepository('GelatoBundle:Gelateria')->findAll();
 
             return $this->render('GelatoBundle:Default:amministratore.html.twig', array(
                 'form' => $form->createView(),
-                'elenco' => $gelaterie, 
+                'elenco' => $gelaterie,
             ));
         }
 
@@ -73,7 +71,7 @@ class GelateriaController extends Controller
                 'form' => $form->createView(),
             ));
         }
-        
+
         /**
          * @Route("/gelateria/{id}/edit", name="delete")
          */

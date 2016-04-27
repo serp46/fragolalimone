@@ -11,6 +11,16 @@
   color: #fff;
 }
 
+.sfondogelatoAdmin {
+    background: url('../img/pinup.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Shadows Into Light', cursive;
+    color: #fff;
+  }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -25,6 +35,23 @@ a {
 
 div {
   border-radius: 10px;
+}
+
+h1 {
+font-size: 1.8em;
+}
+
+h2{
+font-size: 1.4em;
+}
+
+h3{
+font-size: 1em;
+color: #fff;
+}
+
+h4{
+font-size: 0.8em;
 }
 
 .navbar {
@@ -63,9 +90,11 @@ div {
   /*font-family: pacifico;*/
 }
 
+/*
 .left a:hover {
   font-size: 2.2em;
 }
+*/
 
 .right {
   display: inline;
@@ -78,10 +107,11 @@ div {
     font-size: 2em;
     /*font-family: pacifico;*/
 }
-
+/*
 .right a:hover {
     font-size: 2.2em;
 }
+*/
 
 .nav a {
   text-decoration: none;
@@ -131,6 +161,7 @@ div {
 
 .button label {
   font-size: 1.5em;
+  color: #fff;
 }
 
 .home_form {
@@ -295,6 +326,10 @@ div {
 }
 
 /* --------------------------- AMMINISTRATORE ----------------------------- */
+.inserisciDatiPers {
+
+}
+
 .root_personale {
   background: url('../img/pinup.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -304,28 +339,26 @@ div {
   font-family: 'Shadows Into Light', cursive;
 }
 
-.buttons {
-  border: 2px solid white;
-  background: rgba(255, 255, 255, 0.9);
+.contenitore_amministratore {
+  background: rgba(0, 0, 0, 0.6);
   width: 80%;
-  height: 240px;
-  margin: 10px auto; 
+  padding: 50px;
+  margin:auto;
 }
 
 .admin_personal {
-  width: 30%;
+  
   height: 90%;
   display: inline-block;
-  margin: 10px 10px;
+  text-align:center;
   color: black;
 }
 
 .admin_add {
-  width: 30%;
+  width: 49%;
   height: 90%;
   display: inline-block;
-  position: relative;
-  top: -70px;
+  text-align: center;
   color: black;
 }
 
@@ -339,16 +372,14 @@ div {
 
 .inserisciDatiPers {
   display: block;
-  text-align: left;
+
 }
 
 .list_admins {
   display: inline-block;
+  text-align: center;
   width: 30%;
   height: 90%;
-  position: relative;
-  top: -188px;
-  left: 100px;
   color: black;
 }
 
@@ -361,8 +392,7 @@ div {
   background-color: rgba(0, 0, 0, 0.7);
   width: 170px;
   height: 190px;
-  border-radius: 10px; 
-/*overflow: auto; */
+  border-radius: 10px;
 }
 
 .ad_input {
@@ -375,8 +405,8 @@ div {
  .ad_button {
   background-color: rgba(0, 0, 0, 0.7);
   margin: 10px auto;
-  width: 6vw;
-  height: 3vh;
+  width: 60px;
+  height: 40px;
   border-radius: 5px;
   color: white;
   font-size: 0.9em;
@@ -414,6 +444,15 @@ div {
   height: 20px;
   text-align: left;
   font-size: 1.2em;
+}
+
+.input_amministratore {
+    margin: 10px;
+}
+
+.giorni_amministratore{
+    margin:10px;
+
 }
 
 .input_area {
@@ -484,7 +523,7 @@ div {
   padding-top: 10px;
   padding-left: 10px;
   border-radius: 10px 10px 0 0;
-} 
+}
 
 .admin_button {
   background-color: rgba(0, 0, 0, 0.9);
@@ -541,22 +580,13 @@ div {
 }
 
 .cestino img {
-  width: 40px; 
+  width: 40px;
   height: 40px;
 }
 
 
 /* ----------------------- PAUL ------------------------- */
 
-
-h1, h2, h3 {
-  text-align: center;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-}
 
 .pulsante {
   margin: auto;
@@ -629,7 +659,7 @@ a {
   margin-top: 2%;
   display: inline-block;
   width: 30%;
-  text-align: center; 
+  text-align: center;
 }
 
 .gusti {

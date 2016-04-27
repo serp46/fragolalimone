@@ -31,16 +31,18 @@ class GelateriaType extends AbstractType
             ], array('label' => false))
             ->add('address', TextType::class, array('label' => false))
             ->add('phone', IntegerType::class, array('label' => false))
-            ->add('monday', CheckboxType::class)
-            ->add('tuesday', CheckboxType::class)
-            ->add('wednesday', CheckboxType::class)
-            ->add('thursday', CheckboxType::class)
-            ->add('friday', CheckboxType::class)
-            ->add('saturday', CheckboxType::class)
-            ->add('sunday', CheckboxType::class)
+            ->add('monday', CheckboxType::class, array('required' => false))
+            ->add('tuesday', CheckboxType::class, array('required' => false))
+            ->add('wednesday', CheckboxType::class, array('required' => false))
+            ->add('thursday', CheckboxType::class, array('required' => false))
+            ->add('friday', CheckboxType::class, array('required' => false))
+            ->add('saturday', CheckboxType::class, array('required' => false))
+            ->add('sunday', CheckboxType::class, array('required' => false))
             ->add('gusti', EntityType::class, [
                 'class' => 'GelatoBundle:Gusto',
-                'choice_label' => 'name'])
+                'choice_label' => 'name',
+                'multiple'=>true,
+                'expanded'=>true])
             ->add('save', SubmitType::class, array('label' => 'Aggiungi'))
             ->getForm();
     }

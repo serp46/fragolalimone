@@ -45,7 +45,8 @@ class Ricerca
 
     /**
     *
-    *@ORM\OneToMany(targetEntity="Gusto", mappedBy="ricerche")
+    *@ORM\ManytoOne(targetEntity="Gusto", inversedBy="ricerche")
+    *@ORM\JoinCOLUMN(name="gusti_id"), referencedColumn="id")
     */
     private $gusti;
 
