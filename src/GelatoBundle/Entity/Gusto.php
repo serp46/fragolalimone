@@ -42,8 +42,7 @@ class Gusto
 
     /**
     *
-    *@ORM\ManyToOne(targetEntity="Ricerca", inversedBy="gusti")
-    *@ORM\JoinColumn(name="ricerche_id", referencedColumnName="id")
+    *@ORM\OneToMany(targetEntity="Ricerca", mappedBy="gusti")
     */
     private $ricerche;
 
@@ -146,5 +145,5 @@ class Gusto
         return $this->ricerche;
     }
 
-    
+
 }
