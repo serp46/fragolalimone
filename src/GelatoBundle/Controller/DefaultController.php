@@ -71,10 +71,5 @@ class DefaultController extends Controller
         return $this->render('GelatoBundle:Default:registrazione.html.twig');
     }
 
-#    public function loginAction()
-#    {
-#    #    return $this->render('FOSUserBundle:Security:login.html.twig');
-#    }
-
 
 }

@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8"/>
+        <link type="text/css" href="{{ asset('css/reset.css') }}" rel="stylesheet">
+        <link type="text/css" href="{{ asset('css/style.css') }}" rel="stylesheet">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" />
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
     </head>
-    <body>
+
+<nav class="navbar">
+    <ul class="navigation">
+        <li class="left"><a href="{{ url('gelato_profilo_utente') }}">Login</li>
+        <li class="logo"><a href="{{ url('gelato_homepage') }}"><img src="img/pittogramma.png" alt="logo">
+        <li class="right"><a href="{{ url('gelato_contatti') }}">Contatti</a></li>
+    </ul>
+</nav>
+
+    <body class="sfondogelato">
         <div>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
@@ -25,7 +40,7 @@
             {% endfor %}
         {% endif %}
 
-        <div>
+        <div class="box">
             {% block fos_user_content %}
             {% endblock fos_user_content %}
         </div>
