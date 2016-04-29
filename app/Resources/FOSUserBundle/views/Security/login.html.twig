@@ -24,19 +24,20 @@
 
        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
        
-       <label for="username">Username</label><!-- {{ 'security.login.username'|trans }} -->
-       <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="Username" />
+       <label for="username">{{ 'Username'|trans }}</label><br>
+       <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="Username" /><br>
        
-       <label for="password">Password</label><!-- {{ 'security.login.password'|trans }} -->
-       <input type="password" id="password" name="_password" required="required" placeholder="Password" />
+       <label for="password">{{ 'Password'|trans }}</label><br>
+       <input type="password" id="password" name="_password" required="required" placeholder="Password" /><br>
        
        <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-       <label for="remember_me">Ricordami</label><!-- {{ 'security.login.remember_me'|trans }} -->
+       <label for="remember_me">{{ 'Ricordami'|trans }}</label><br>
 
-       <input type="submit" class="one_half last" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+       <input type="submit" class="pulsante" id="_submit" name="_submit" value="{{ 'login'|trans }}"></input>
    
     </form>
 
+<div class="allinea_pass">
   <p class="passwordimenticata">Hai smarrito la tua Password?
     <a href="{{ url('fos_user_resetting_request') }}">Clicca qui</a>
   </p>
@@ -44,6 +45,7 @@
   <p class="registrati">Non hai un account?
     <a href="{{ url('fos_user_registration_register') }}">Registrati</a>
   </p> 
+</div>
 
 </div>
 

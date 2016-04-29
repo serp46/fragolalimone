@@ -1,0 +1,30 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block title %}Fragola & Limone - Rregistrazione{% endblock %}
+
+{% block body %}
+
+
+<div id="formid">
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+{{ form_row(form.username,{'label' : "Username", 'attr': {'class': 'username'}}) }}
+        <br/>
+{{ form_row(form.email,{'label' : "E-Mail", 'attr': {'class': 'mail'}}) }}
+        <br/>
+
+{{ form_row(form.plainPassword,{'label' : "Password", 'attr': {'class': 'password'}}) }}
+        <br/>
+
+
+
+    <div>
+        <input class="bottone" type="submit" value="Registrati" />
+    </div>
+{{ form_end(form) }}
+
+</div>
+
+
+{% endblock %}
