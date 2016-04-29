@@ -1,23 +1,32 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
-{% block title %}Fragola & Limone - Rregistrazione{% endblock %}
-
 {% block body %}
 
+    <div class="brand">
+    <a href="/"><img src="{{ asset('img/logo_completo.png') }}" alt="logo"/></a>
+    </div>
 
-<div id="formid">
+    <div class="registrazione">
 
-{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    <h2 class="registrazione_payoff">Benvenuto, compila per registrarti!</h2>
 
-{{ form_row(form.username,{'label' : "Username", 'attr': {'class': 'username'}}) }}
-        <br/>
-{{ form_row(form.email,{'label' : "E-Mail", 'attr': {'class': 'mail'}}) }}
-        <br/>
+    {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
-{{ form_row(form.plainPassword,{'label' : "Password", 'attr': {'class': 'password'}}) }}
-        <br/>
+    <div class="compilazione_registrazione ">
+    {{ form_row(form.username,{'label' : "Username", 'attr': {'class': 'registrazione_input', 'placeholder': 'Nome'}}) }}
+    </div>
+    
+    <div class="compilazione_registrazione ">
+    {{ form_row(form.username,{'label' : "Username", 'attr': {'class': 'registrazione_input'}}) }}
+    </div>
 
+    <div class="compilazione_registrazione ">
+    {{ form_row(form.email,{'label' : "E-Mail", 'attr': {'class': 'registrazione_input'}}) }}
+    </div>
 
+    <div class="compilazione_registrazione ">
+    {{ form_row(form.plainPassword,{'label' : "Password", 'attr': {'class': 'registrazione_input'}}) }}
+    </div>
 
     <div>
         <input class="bottone" type="submit" value="Registrati" />

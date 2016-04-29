@@ -237,7 +237,7 @@ font-family: 'Shadows Into Light', cursive;
 
 /* ----------------------- REGISTRAZIONE ------------------------- */
 
-.compilazione {
+.compilazione_registrazione {
   margin: auto;
   width: 250px;
   line-height: 35px;
@@ -278,7 +278,7 @@ font-family: 'Shadows Into Light', cursive;
 
 .gelato_sciolto {
   background-image: url('../img/back_error.jpg') no-repeat center center fixed;
-   -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
