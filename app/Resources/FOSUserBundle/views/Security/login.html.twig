@@ -14,18 +14,18 @@
       <a href="/"><img src="img/logo_completo.png" alt="logo"></a>
     </div>
 
-  <div class="box_login">
-
     <h2>LOGIN</h2>
-        
+    
+<div class="box_login">
+
     <form action="{{ path("fos_user_security_check") }}" method="post">
 
-      <div class="compilazione">
+    <div class="compilazione">
 
        <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
        
        <label for="username">Username</label><!-- {{ 'security.login.username'|trans }} -->
-       <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
+       <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" placeholder="Username" />
        
        <label for="password">Password</label><!-- {{ 'security.login.password'|trans }} -->
        <input type="password" id="password" name="_password" required="required" placeholder="Password" />
@@ -37,16 +37,16 @@
    
     </form>
 
-  </div>
-
-  <p class="registrati">Non hai un account?
-    <a href="{{ url('fos_user_registration_register') }}">Registrati</a>
-  </p>
   <p class="passwordimenticata">Hai smarrito la tua Password?
     <a href="{{ url('fos_user_resetting_request') }}">Clicca qui</a>
   </p>
 
-  {% endblock fos_user_content %}
- 
+  <p class="registrati">Non hai un account?
+    <a href="{{ url('fos_user_registration_register') }}">Registrati</a>
+  </p> 
+
+</div>
+
+{% endblock fos_user_content %} 
 </div>
 {% endblock body %}

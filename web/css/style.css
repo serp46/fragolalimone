@@ -578,6 +578,7 @@ font-family: 'Shadows Into Light', cursive;
   padding: 50px 0;
   width: 80%;
   text-align: center;
+  color: white;
 }
 
 .home {
@@ -762,20 +763,25 @@ margin: 5px;
 }
 
 .box_login {
-line-height: 100px;
+line-height: 30px;
 text-align: center;
-margin: 20px auto;
+margin: 30px auto;
 }
 
-.box_login h2 {
+.box h2 {
   font-size: 2.5em;
+  margin-top: 20px;
 }
 
 .conferma {
   margin-top: 30px;
 }
 
-.conferma button {
+.passwordimenticata  {
+  font-size: 1em;
+}
+
+/*.conferma button {
   background-color: rgba(0, 0, 0, 0.7);
   width: 20%;
   height: 30%;
@@ -783,4 +789,5 @@ margin: 20px auto;
   color: white;
   font-size: 1.2em;
   border-style: none;
-}
+}*/
+
