@@ -5,16 +5,38 @@ namespace GelatoBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
-use GelatoBundle\Entity\Gelateria;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use GelatoBundle\Form\GelateriaType;
+use GelatoBundle\Entity\Gelateria;
 
 class DefaultController extends Controller
 {
     public function indexAction()
     {
+
+        $gusti=$this->getDoctrine()->getRepository('GelatoBundle:Gusto')->findAll();
+        return $this->render('GelatoBundle:Default:index.html.twig', [
+          'gusti'=>$gusti
+        ]);
+
         return $this->render('GelatoBundle:Default:index.html.twig');
+    }
+
+    public function filtroProvinciaAction(Request $request)
+    {
+        $provincie=$this->getDoctrine()->getRepository('GelatoBundle:Provincia')->findByIdRegione($request->get('id'));
+        return $this->render('GelatoBundle:Default:hp_provinces.html.twig', array(
+              'provincie'=>$provincie
+        ));
+    }
+    
+    public function filtroCittaAction(Request $request)
+    {
+        $citta=$this->getDoctrine()->getRepository('GelatoBundle:Citta')->findByIdProvincia($request->get('id'));
+        return $this->render('GelatoBundle:Default:hp_cities.html.twig', array(
+              'cities'=>$citta
+        ));
     }
 
     public function utenteAction()

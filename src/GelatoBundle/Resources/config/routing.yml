@@ -2,6 +2,22 @@ gelato_homepage:
     path:     /
     defaults: { _controller: GelatoBundle:Default:index }
 
+hpprovincefilter:
+    path:     /hpprovincefilter/{id}
+    defaults: { _controller: FrontEndBundle:Default:hpProvinceFilter }
+
+hpcityfilter:
+    path:     /hpcityfilter/{id}
+    defaults: { _controller: FrontEndBundle:Default:hpCityFilter }
+
+searchprovincefilter:
+    path:     /searchprovincefilter/{id}
+    defaults: { _controller: FrontEndBundle:Default:searchProvinceFilter }
+
+searchcityfilter:
+    path:     /searchcityfilter/{id}
+    defaults: { _controller: FrontEndBundle:Default:searchCityFilter }    
+
 gelato_profilo_utente:
     path:     /utente
     defaults: { _controller: GelatoBundle:Default:utente }

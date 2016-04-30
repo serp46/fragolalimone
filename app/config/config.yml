@@ -73,3 +73,14 @@ fos_user:
     db_driver: orm # other valid values are 'mongodb', 'couchdb' and 'propel'
     firewall_name: main
     user_class: GelatoBundle\Entity\User
+    registration:
+      confirmation:
+        enabled: true
+        from_email:
+          address:  registration@example.com
+          sender_name:  F&L
+    resetting:
+      email:
+        from_email:
+          address: resetting@example.com
+          sender_name: resetting
