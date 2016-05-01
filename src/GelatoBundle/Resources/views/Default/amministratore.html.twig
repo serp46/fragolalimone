@@ -4,100 +4,52 @@
 
 {% block body %}
 
-     <div class="contenitore_amministratore">
-
-    <div class="admin_personal">
+<div class="contenitore_amministratore">
 
         <form action="/" method="POST" name="inserimento-dati">
 
-          <h2 class="inserisciDatiPers">Dati Personali:</h2>
+          <h1 class="inserisciDatiPers">Aggiungi Amministratore</h1><br>
 
            <div class="ad_pers_dati">
+              <label>Nome:</label><br>
               <input class="ad_input" type="text" name="gelateria" placeholder="Nome">
             </div>
 
             <div class="ad_pers_dati">
+              <label>Cognome:</label><br>
               <input class="ad_input" type="text" name="cognome" class="input" placeholder="Cognome">
             </div>
 
             <div class="ad_pers_dati">
-              <input class="ad_input" type="text" name="città" class="input" placeholder="Città">
-            </div>
-
-            <div class="ad_pers_dati">
+              <label>Email:</label><br>
               <input class="ad_input" type="text" name="email" class="input" placeholder="Email">
             </div>
 
             <div class="ad_pers_dati">
+              <label>Password:</label><br>
               <input class="ad_input" type="text" name="password" class="input" placeholder="Password">
             </div>
 
-            <!--<div class="ad_mod">
-              <button class="pulsante">Modifica</button>
-            </div>
-        -->
-
-            <div class="ad_pers_cerca">
               <button class="pulsante">Salva</button>
-            </div>
 
         </form>
 
-      </div> <!-- admin_pers -->
+    </div> <!-- contenitore_amministratore -->
 
-     <!-- <div class="admin_add">
-
-         <div id="group_ad">
-
-          <form action="/" method="POST" name="inserimento-dati">
-
-          <h3 class="inserisciDatiAd">Aggiungi Amministratore:</h3>
-           <div class="ad_ad_dati">
-              <input class="ad_input" type="text" name="nome" placeholder="Nome"/>
-            </div>
-
-            <div class="ad_ad_dati">
-              <input class="ad_input" type="text" name="cognome" class="input" placeholder="Cognome">
-            </div>
-
-            <div class="ad_ad_dati">
-              <input class="ad_input" type="text" name="email" class="input" placeholder="Email">
-            </div>
-          </div>
-
-          <div class="admin_cerca">
-              <button class="ad_button">Aggiungi</button>
-            </div>
-        -->
-
-        </form>
-      </div>
-      </div> <!-- admin_add -->
-
-      <!-- <div class="list_admins">
-
-        <h3 class="list_ads">Amministratori:</h3>
-          <div class="list_box">
-          </div>
-      </div>
--->
-     <!-- buttons -->
-
-      <div class="box_aggiungi_gelateria">
+<div class="box_aggiungi_gelateria">
 
       {{ form_start(form) }}
 
+        <h3><strong>Aggiungi Gelateria:</strong></h3>
 
-       <h3 class="titolo_aggiungi_gelateria">Aggiungi Gelateria:</h3>
-
-       <div class="input_amministratore">
+      <div class="input_amministratore">
 
            <div class="input_area">
                {{ form_row(form.name, {'attr': {'class': "admin_input", 'placeholder': "Gelateria", 'type': "text" }}) }}
             </div>
 
             <div class="input_area">
-                {{ form_row(form.city, {'attr': {'class': "admin_input", 'placeholder': "Città", 'type': "text" }}) }}
+                {{ form_row(form.city, {'attr': {'class': "home_gusti", 'type': "text" }}) }}
             </div>
 
             <div class="input_area">
@@ -109,9 +61,9 @@
             </div>
         </div>
 
-        <h3> Giorni di Chiusura </h3>
-        <div class="giorni_amministratore">
+        <h4> Giorni di Chiusura </h4>
 
+      <div class="giorni_amministratore">
 
         <div class="checkbox_area">
           {{ form_row(form.monday, {'attr': {'class': "checkbox_area", 'type': "checkbox" }}) }}
@@ -142,27 +94,24 @@
         </div>
         </div>
 
-        <h3>Gusti</h3>
-        <div class="lista_gusti">
-        <div class="checkbox_area">
-        {{ form_row(form.gusti, {'attr': {'class': "checkbox_area", 'type': "checkbox" }}) }}
-        </div>
-        </div>
-
+        <h4>Gusti</h4>
+          <div class="lista_gusti">
+            <div class="checkbox_area">
+              {{ form_row(form.gusti, {'attr': {'class': "checkbox_area", 'type': "checkbox" }}) }}
+            </div>
+          </div>
 
           <div class="admin_aggiungi">
             {{ form_row(form.save, {'attr': {'class': "pulsante", 'type': "submit" }}) }}
           </div>
 
-
       {{ form_end(form) }}
 
-      </div> <!-- box_aggiungi_gelateria -->
+</div> <!-- box_aggiungi_gelateria -->
 
+<div class="box_risultati">
 
-    <div class="box_risultati">
-
-      <div class="ricerca">
+   <div class="ricerca">
 
       <h3 class="titolo_ricerca">Ricerca Avanzata:</h3>
 
@@ -178,9 +127,9 @@
           <button class="pulsante">Cerca</button>
         </div>
 
-    </div> <!-- box_risultati -->
+   </div> <!-- ricerca -->
 
-    <div class="risultati">
+  <div class="risultati">
 
 {% for gelateria in elenco %}
 
@@ -198,11 +147,8 @@
 
 {% endfor %}
 
+  </div> <!-- risultati -->
 
-
-
-    </div> <!-- risultati -->
-
-    </div> <!-- box_risultati -->
+</div> <!-- box_risultati -->
 
   {% endblock %}

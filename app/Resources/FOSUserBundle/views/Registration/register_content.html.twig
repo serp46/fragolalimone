@@ -13,27 +13,26 @@
     {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
 
     <div class="compilazione_registrazione ">
-    {{ form_row(form.username,{'label' : "Username", 'attr': {'class': 'registrazione_input', 'placeholder': 'Nome'}}) }}
+    <label>Username:</label><br>
+    {{ form_row(form.username,{'attr' : {'class' : 'registrazione_input', 'placeholder' : 'Nome'}}) }}
     </div>
     
     <div class="compilazione_registrazione ">
-    {{ form_row(form.username,{'label' : "Username", 'attr': {'class': 'registrazione_input'}}) }}
+    <label>Email:</label><br>
+    {{ form_row(form.email,{'attr' : {'class' : 'registrazione_input'}}) }}
     </div>
 
     <div class="compilazione_registrazione ">
-    {{ form_row(form.email,{'label' : "E-Mail", 'attr': {'class': 'registrazione_input'}}) }}
-    </div>
-
-    <div class="compilazione_registrazione ">
-    {{ form_row(form.plainPassword,{'label' : "Password", 'attr': {'class': 'registrazione_input'}}) }}
+    <label>Password:</label><br>
+    {{ form_row(form.plainPassword,{'attr' : {'class': 'registrazione_input'}}) }}
     </div>
 
     <div>
-        <input class="bottone" type="submit" value="Registrati" />
+        <input class="pulsante" type="submit" value="Registrati" />
     </div>
+
 {{ form_end(form) }}
 
 </div>
-
 
 {% endblock %}
