@@ -1,12 +1,14 @@
 <?php
 
-namespace GelatoBundle\Form;
 
+namespace FrontEndBundle\Form;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormBuilderInterface;;
+use GelatoBundle\Entity\Gusto;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-//use Symfony\Bridge\Doctrine\Form\Type\EntityType;
-
 class GustoType extends AbstractType
 {
     /**
@@ -15,18 +17,20 @@ class GustoType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        //$builder
-        //    ->add('name')
-        //    ->add('gelaterie')
-        //    ->add('ricerche')
-        //;
-        ->add('gusti', EntityType::class, [
-                'class' => 'GelatoBundle:Gusto',
-                'choice_label' => 'name'
-            ])
+        $builder
+            ->add('name')
+            //->add('Gusto', ChoiceType::class, [
+            //  'choices'=>[
+            //    'Seleziona' => 'Scegli Tipo',
+            //    'Ananas'=> 'Ananas',
+            //    'Arancia'=>'Arancia',
+            //    'Altro'=>'Altro'
+            //  ]
+            //])
+            ->add('cerca', SubmitType::class)
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */
@@ -37,3 +41,4 @@ class GustoType extends AbstractType
         ));
     }
 }
+

@@ -2,21 +2,21 @@ gelato_homepage:
     path:     /
     defaults: { _controller: GelatoBundle:Default:index }
 
-hpprovincefilter:
-    path:     /hpprovincefilter/{id}
-    defaults: { _controller: FrontEndBundle:Default:hpProvinceFilter }
+gelato_filtro_provincia:
+    path:     /filtro_provincia/{id}
+    defaults: { _controller: GelatoBundle:Default:filtroProvincie }
 
-hpcityfilter:
-    path:     /hpcityfilter/{id}
-    defaults: { _controller: FrontEndBundle:Default:hpCityFilter }
+gelato_filtro_citta:
+    path:     /filtro_citta/{id}
+    defaults: { _controller: GelatoBundle:Default:filtroCitta }
 
-searchprovincefilter:
-    path:     /searchprovincefilter/{id}
-    defaults: { _controller: FrontEndBundle:Default:searchProvinceFilter }
+gelato_filtro_cerca_provincia:
+    path:     /filtro_cerca_provincia/{id}
+    defaults: { _controller: GelatoBundle:Default:filtroCercaProvincie }
 
-searchcityfilter:
-    path:     /searchcityfilter/{id}
-    defaults: { _controller: FrontEndBundle:Default:searchCityFilter }    
+gelato_filtro_cerca_citta:
+    path:     /filtro_cerca_citta/{id}
+    defaults: { _controller: GelatoBundle:Default:filtroCercaCitta }    
 
 gelato_profilo_utente:
     path:     /utente

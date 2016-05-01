@@ -10,38 +10,38 @@
        <a href="/"><img src="{{ asset('img/logo_completo.png') }}" alt="logo"></a>
     </div>
 
-    <form class="home_form">
+    <form class="home_form" action="{{ url ('search') }}">
 
-      <h2 class="home_payoff">"Il tuo Gelato in un click"</h2>
+        <h2 class="home_payoff">"Il tuo Gelato in un click"</h2>
 
           <div class="button">
           <label for="Gusto1" class="titolo1">Gusto 1</label><br>
             <select class="home_gusti" name="gusto1">
-              <option>Arancia</option>
-              <option>Ananas</option>
-              <option>Banana</option>
-              <option>Cioccolato</option>
+              <option value=0>Nessuno</option>
+              {% for gusto in gusti %}
+              <option value="{{gusto.id}}">{{gusto.name}}</option>
+              {% endfor %}
             </select>
           </div>
 
           <div class="button">
           <label for="Gusto2" class="">Gusto 2</label><br>
             <select class="home_gusti" name="gusto2">
-              <option>Arancia</option>
-              <option>Ananas</option>
-              <option>Banana</option>
-              <option>Cioccolato</option>
+              <option value=0>Nessuno</option>
+              {% for gusto in gusti %}
+              <option value="{{gusto.id}}">{{gusto.name}}</option>
+              {% endfor %}
             </select>
           </div>
 
           <div class="button">
           <label for="Gusto3" class="titolo1">Gusto 3</label><br>
             <select class="home_gusti" name="gusto3">
-              <option>Arancia</option>
-              <option>Ananas</option>
-              <option>Banana</option>
-              <option>Cioccolato</option>
-            </select>
+              <option value=0>Nessuno</option>
+              {% for gusto in gusti %}
+              <option value="{{gusto.id}}">{{gusto.name}}</option>
+              {% endfor %}
+          </select>
           </div>
 
           <div class="cont_cerca">
