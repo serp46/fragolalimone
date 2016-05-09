@@ -10,7 +10,7 @@
        <a href="/"><img src="{{ asset('img/logo_completo.png') }}" alt="logo"></a>
     </div>
 
-    <form class="home_form" action="{{ url ('search') }}">
+    <form class="home_form" action="{{ url ('gelato_homepage') }}">
 
         <h2 class="home_payoff">"Il tuo Gelato in un click"</h2>
 
@@ -45,7 +45,7 @@
           </div>
 
           <div class="cont_cerca">
-            <button class="pulsante">Cerca</button>
+            <button class="pulsante"><a href="{{ path('gelato_risultati') }}">Cerca</button>
           </div>
     </form>
 

@@ -11,24 +11,25 @@
     <h2 class="registrazione_payoff">Benvenuto, compila per registrarti!</h2>
 
     {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+    {{ form_widget(form) }}
 
-    <div class="compilazione_registrazione ">
-    <label>Username:</label><br>
-    {{ form_row(form.username,{'attr' : {'class' : 'registrazione_input', 'placeholder' : 'Nome'}}) }}
+    <div class="compilazione_registrazione">
+    
+    {{ form_row(form.username, {'label' : 'username', 'attr' : {'class' : 'registrazione_input', 'placeholder' : 'Nome'}}) }}
     </div>
     
-    <div class="compilazione_registrazione ">
-    <label>Email:</label><br>
-    {{ form_row(form.email,{'attr' : {'class' : 'registrazione_input'}}) }}
+    <div class="compilazione_registrazione">
+    
+    {{ form_row(form.email, {'attr' : {'class' : 'registrazione_input'}}) }}
     </div>
 
-    <div class="compilazione_registrazione ">
-    <label>Password:</label><br>
-    {{ form_row(form.plainPassword,{'attr' : {'class': 'registrazione_input'}}) }}
+    <div class="compilazione_registrazione">
+   
+    {{ form_row(form.plainPassword, {'attr' : {'class': 'registrazione_input'}}) }}
     </div>
 
     <div>
-        <input class="pulsante" type="submit" value="Registrati" />
+        <input class="pulsante" type="submit" value="Registrati"/>
     </div>
 
 {{ form_end(form) }}
@@ -36,3 +37,9 @@
 </div>
 
 {% endblock %}
+
+
+
+
+
+

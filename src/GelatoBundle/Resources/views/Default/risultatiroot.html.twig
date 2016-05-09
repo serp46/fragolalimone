@@ -1,111 +1,146 @@
 {% extends "::base_pinup.html.twig" %}
-{% block stylesheet %}
-    <style>
-        .sfondogelato {
-            background: url('../img/pinup.jpg') no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            font-family: 'Shadows Into Light', cursive;
-            color: #fff;
-        }
 
-    </style>
+{% block title %}Fragola & Limone - Admin{% endblock %}
+
+{% block stylesheet %}
+
+<style>
+    body {
+    background: url('img/pinup.jpg') no-repeat center center fixed;
+    }
+
+</style>
 
 {% endblock %}
 
 {% block body %}
 
-    <form action="mailto:paul.sergentu@gmail.com" method="GET" name="inserimentogelati">
+<div class="Box_utente">
 
-    <div class="Buttons">
+  <form action="mailto:paul.sergentu@gmail.com" method="GET" name="inserimentogelati">
 
-    <h2>Stai cercando un gelato...</h2>
+    <h1>Stai cercando un gelato...</h1>
 
-              <div class="button">
-        <label for="gusto1">Ai gusti</label>
-        <br>
-        <select class="gusti" name="gusto1">
-          <option value="1"> Mela</option>
-          <option value="2"> Melograno</option>
-        </select>
+        <div class="ad_pers_dati">
 
+          <label for="gusto1">Ai gusti</label>
+          <br>
+          <select class="gusti" name="gusto1">
+            <option value="1">Mela</option>
+            <option value="2">Melograno</option>
+          </select>
+        
 
-        <select class="gusti" name="gusto2">
-          <option value="1"> Mela</option>
-          <option value="2"> Melograno</option>
-        </select>
-
-
-        <select class="gusti" name="gusto3">
-          <option value="1"> Mela</option>
-          <option value="2"> Melograno</option>
-        </select>
-          </div>
-
-
-
-      <div class="button">
-        <label for="citta">nella provincia di:</label>
-        <br>
-        <select class="gusti" name="gusto3">
-          <option value="1"> Mela</option>
-          <option value="2"> Melograno</option>
-        </select>
-      </div>
-
-      <div class="button">
-        <label for="periodo">il giorno:</label>
-        <br>
-        <select class="gusti" name="gusto3">
-          <option value="1"> Mela</option>
-          <option value="2"> Melograno</option>
-        </select>
-      </div>
-
-
-      <div class= "boss">
-        <input class="pulsante" type="button" value="Cerca">
-      </div>
-
-    </div>
-
-    <div class="Barrainfo">
-        <div class="nome">Gusti</div>
-        <div class="informazioni">Statistiche</div>
-
-    </div>
-
-    </form>
-
-        <div class="Risultati overflow">
-
-    <hr>
-            <div class="Risultato">
-
-                <div class="nome"><h2>Fragola</h2></div>
-                <div class="informazioni percentuale"><meter min="0" low="30" high="100" max="100" value="20"></div>
-                <div class="statistica"> 1908 Ricerche </div>
-
-
-            </div>
-    <hr>
-            <div class="Risultato">
-
-                <div class="nome"><h2>Limone</h2></div>
-                <div class="informazioni"><meter min="100" max="500" value="300"></div>
-                <div class="statistica"> 1300 Ricerche </div>
-            </div>
-
-
-    <hr>
-            <div class="Risultato">
-
-                <div class="nome"><h2>Cioccolato</h2></div>
-                <div class="informazioni"><meter min="100" max="500" value="200"></div>
-                <div class="statistica"> 900 Ricerche </div>
-            </div>
-
+          <select class="gusti" name="gusto2">
+            <option value="1">Mela</option>
+            <option value="2">Melograno</option>
+          </select>
+       
+            
+          <select class="gusti" name="gusto3">
+            <option value="1">Mela</option>
+            <option value="2">Melograno</option>
+          </select>
+          
         </div>
+
+        <div class="ad_pers_dati">
+          <label for="citta">Nella città di:</label>
+          <br>
+          <select class="gusti" name="gusto3">
+            <option value="1">Milano</option>
+            <option value="2">Roma</option>
+          </select>
+        </div>
+
+        <div class="ad_pers_dati">      
+          <label for="periodo">Il giorno:</label>
+          <br>
+          <select class="gusti" name="gusto3">
+            <option value="1">10/05/2016</option>
+            <option value="2">11/05/2016</option>
+          </select>
+        </div>
+
+        <div class="boss">
+          <input class="pulsante" type="Button" value="Cerca">
+        </div>
+
+  </form>
+
+</div>
+
+<div class="preferiti">
+  <h2>Risultati</h2>
+</div>
+
+  <div class="Barrainfo">
+    <div class="nome">Gusti</div>
+      <div class="informazioni">Statistiche</div>
+    </div>
+
+      <div class="Risultati overflow">
+
+        <div class="Risultato">
+          <div class="nome"><h2>Fragola</h2></div>
+            <div class="informazioni percentuale"><meter low="50" high="500" min="0" max="2000" value="1000"></div>
+              <div class="statistica"> 1000 Richieste </div>
+        </div>
+
+          <hr>
+
+        <div class="Risultato">
+          <div class="nome"><h2>Limone</h2></div>
+            <div class="informazioni"><meter low="50" high="500" min="0" max="2000" value="800"></div>
+              <div class="statistica"> 800 Richieste </div>
+        </div>
+
+          <hr>
+        
+        <div class="Risultato">
+          <div class="nome"><h2>Cioccolato</h2></div>
+            <div class="informazioni"><meter high="500" min="0" max="2000" value="600"></div>
+              <div class="statistica"> 600 Richieste </div>
+        </div>
+
+        <hr>
+
+        <div class="Risultato">
+          <div class="nome"><h2>Nocciola</h2></div>
+            <div class="informazioni"><meter high="500" min="0" max="2000" value="500"></div>
+              <div class="statistica"> 500 Richieste </div>
+        </div>
+
+        <hr>
+
+        <div class="Risultato">
+          <div class="nome"><h2>Menta</h2></div>
+            <div class="informazioni"><meter high="500" min="0" max="2000" value="350"></div>
+              <div class="statistica"> 350 Richieste </div>
+        </div>
+
+        <hr>
+
+        <div class="Risultato">
+          <div class="nome"><h2>Puffo</h2></div>
+            <div class="informazioni"><meter high="500" min="0" max="2000" value="200"></div>
+              <div class="statistica"> 200 Richieste </div>
+        </div>
+
+        <hr>
+
+        <div class="Risultato">
+          <div class="nome"><h2>Mango</h2></div>
+            <div class="informazioni"><meter high="500" min="0" max="2000" value="100"></div>
+              <div class="statistica"> 100 Richieste </div>
+        </div>
+
+        <hr>
+
+        <div class="Risultato">
+          <div class="nome"><h2>Cocco</h2></div>
+            <div class="informazioni"><meter high="500" min="0" max="2000" value="50"></div>
+              <div class="statistica"> 50 Richieste </div>
+        </div>
+  </div>
 {% endblock %}

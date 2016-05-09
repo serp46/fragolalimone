@@ -1,53 +1,48 @@
 {% extends "::base.html.twig" %}
 
-
 {% block body %}
 
+<div class="Box_utente">
 
-<div class="Box utente">
+    <form action="index.html" method="post">
 
-<div class="titolo testobianco"> <h1>Impostazioni Personali</h1></div>
-
-<div class="informazioniutente largo100">
-
-<form class="datiutente" action="index.html" method="post">
-
-<div class="datiutente">
-
+      <h1>Impostazioni Personali</h1>
+          
+          <div class="ad_pers_dati">
           <label for="nome">Nome</label>
           <br>
-          <input type="text" name="nome" value="Luca">
-<br>
+          <input class="ad_input" type="text" name="nome" value="Luca">
+          </div>
+          
+          <div class="ad_pers_dati">
           <label for="cognome">Cognome</label>
           <br>
-          <input type="text" name="cognome" value="Bottone">
-<br>
+          <input class="ad_input" type="text" name="cognome" value="Bottone">
+          </div>
+      
+          <div class="ad_pers_dati">
           <label for="citta">Città</label>
           <br>
-          <input type="text" name="name" value="Lodi">
-</div>
-
-<div class="datiaccesso">
-
+          <input class="ad_input" type="text" name="name" value="Lodi">
+          </div>
+          
+          <div class="ad_pers_dati">
           <label for="e-mail">E-mail</label>
           <br>
-          <input type="text" name="name" value="luca.bottoni@gmail.com">
-<br>
+          <input class="ad_input" type="text" name="name" value="luca.bottoni@gmail.com">
+          </div>
+          
+          <div class="ad_pers_dati">
           <label for="password">Password</label>
           <br>
-          <input type="text" name="name" value="********">
-<br>
-          <input class="pulsante" type="submit" name="name" value="Salva">
+          <input class="ad_input" type="text" name="name" value="********">
+          </div>
+      
+          <button class="pulsante">Salva</button>
 
-</div>
-
-  </div>
-
-  </form>
+      </form>
 
 </div> <!-- Box utente -->
-
-<div class="barra"></div>
 
 <div class="preferiti">
   <h2>Preferiti</h2>
@@ -61,7 +56,7 @@
 
   </div>
 
-          <div class="Risultati overflow">
+  <div class="Risultati overflow">
 
               <div class="Risultato">
 
@@ -88,6 +83,6 @@
               </div>
 
 
-          </div>
+  </div>
 
 {% endblock %}

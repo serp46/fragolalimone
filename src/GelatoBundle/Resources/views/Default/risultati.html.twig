@@ -7,6 +7,10 @@
 <style>
     body {
     background: url('img/pinup.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     }
 
 </style>
@@ -15,20 +19,17 @@
 
 {% block body %}
 
+<div class="Box_utente">
+
 <form action="mailto:paul.sergentu@gmail.com" method="GET" name="inserimentogelati">
 
-<div class="Buttons">
-
-<br>
-
-<h2>Stai cercando un gelato...</h2>
+<div class="titolo"> <h1>Stai cercando un gelato...</h1></div>
 
 <div class="buttons_contenitor">
 
-  <div class="Button">
+  <div class="ad_pers_dati">
 
     <label for="gusto1">Ai gusti</label>
-    <br>
     <br>
     <select class="gusti" name="gusto1">
       <option value="1"> Mela</option>
@@ -48,25 +49,22 @@
     </select>
   </div>
 
-  <div class="Button">
+  <div class="ad_pers_dati">
 
-    <label for="citta">nella città di:</label>
-    <br>
+    <label for="citta">Nella città di:</label>
     <br>
     <select class="gusti" name="gusto3">
-      <option value="1"> Mela</option>
-      <option value="2"> Melograno</option>
+      <option value="1"> Milano</option>
+      <option value="2"> Roma</option>
     </select>
   </div>
 
-  <div class="Button">
+  <div class="ad_pers_dati">
 
-    <label for="periodo">il giorno:</label>
-    <br>
+    <label for="periodo">Il giorno:</label>
     <br>
     <select class="gusti" name="gusto3">
-      <option value="1"> Mela</option>
-      <option value="2"> Melograno</option>
+      <option value="1"> 10/05/2016</option>
     </select>
   </div>
 
@@ -77,9 +75,13 @@
     <input class="pulsante" type="Button" value="Cerca">
   </div>
 
+</form>
+
 </div>
 
-</form>
+<div class="preferiti">
+  <h2>Risultati</h2>
+</div>
 
             <div class="Barrainfo">
                 <div class="nome">Gelateria</div>

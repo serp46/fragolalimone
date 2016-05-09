@@ -43,7 +43,7 @@ font-weight: bold;
 }
 
 h2{
-font-size: 1.4em;
+font-size: 1.5em;
 font-weight: bold;
 }
 
@@ -381,12 +381,12 @@ font-family: 'Shadows Into Light', cursive;
 
 .ad_pers_dati {
   display: inline-block;
+  padding: 5px;
+  text-align: left;
 }
 
 .ad_pers_dati label {
   font-size: 1.3em;
-  position: relative;
-  right: 55px;
 }
 
 .ad_mod {
@@ -556,7 +556,6 @@ font-family: 'Shadows Into Light', cursive;
 }
 
 .boss {
-  padding: 3% 40%;
   margin: auto;
   text-align: center;
 }
@@ -571,14 +570,13 @@ font-family: 'Shadows Into Light', cursive;
   text-align: right;
 }
 
-.Box {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: relative;
-  margin: 30px auto;
-  padding: 50px 0;
-  width: 80%;
-  text-align: center;
-  color: white;
+.Box_utente {
+  background: rgba(0, 0, 0, 0.7);
+  width: 70%;
+  padding: 40px;
+  margin:20px auto;
+  text-align:center;
+  line-height: 30px;
 }
 
 .home {
@@ -602,23 +600,16 @@ font-family: 'Shadows Into Light', cursive;
   height: auto;
 }
 
-.buttons_contenitor {
-  margin: auto;
-  width: 100%;
-  height: auto;
-  text-align: center;
-}
-
 .Button {
   margin-top: 2%;
   display: inline-block;
-  width: 30%;
+  
   text-align: center;
 }
 
 .gusti {
-  width: 80px;
-  height: auto;
+  width: 160px;
+  height: 30px;
   background-color: white;
   border-radius: 10px;
   text-decoration: none;
@@ -635,6 +626,10 @@ font-family: 'Shadows Into Light', cursive;
   text-align: center;
  }
 
+meter {
+  width: 300px;
+}
+
 .Buttons {
   background: rgba(0, 0, 0, 0.6);
   width: 80%;
@@ -649,10 +644,9 @@ font-family: 'Shadows Into Light', cursive;
 }
 
 .Barrainfo {
-margin-top: 2%;
 margin-left: auto;
 margin-right: auto;
-width: 80%;
+width: 70%;
 background-color: rgba(0, 0, 0, 0.6);
 padding: 1%;
 border-bottom-right-radius:0px;
@@ -661,7 +655,7 @@ border-bottom-left-radius: 0px;
 
 .Risultati {
   background: rgba(255, 255, 255, 0.8);
-  width: 80%;
+  width: 70%;
   margin-bottom: 5%;
   margin-left: auto;
   margin-right: auto;
@@ -683,7 +677,7 @@ border-bottom-left-radius: 0px;
 }
 
 .Risultato div {
-  display: table-cell;
+  display: inline-block;
   vertical-align: middle;
   width: 32%;
   text-align: center;
@@ -701,56 +695,17 @@ border-bottom-left-radius: 0px;
   margin-top: 5%;
 }
 
-.titolo {
-margin-bottom: 50px;
-}
-
-.informazioniutente {
-  width: 50%;
-  display: inline-block;
-  border: 1px solid white;
-}
-
-.datiutente input[type=text] {
-  width: 150px;
-  height: 25px;
-  border-radius: 5px;
-  border: none;
-}
-
-.datiaccesso {
-  vertical-align: top;
-  line-height: 30px;
-}
-
-
-.datiaccesso input[type=text] {
-  width: 150px;
-  height: 25px;
-  border-radius: 5px;
-  border: none;
+.Box_utente h1 {
+margin-bottom: 20px;
 }
 
 .preferiti {
 width: 120px;
 height: 50px;
 background-color: rgba(0, 0, 0, 0.7);
-margin: auto;
+margin: 20px auto;
 padding-top: 15px;
-}
-
-.risultato div.informazioni {
-  margin: auto;
-  width: 500px;
-}
-
-.risultato div.informazioni meter {
-  width: 100%;
-}
-
-.percentuale {
-width: 60%;
-
+text-align: center;
 }
 
 .datiutente input {
@@ -775,5 +730,9 @@ margin: 30px auto;
 .allinea_pass {
   margin: 0 auto;
   font-size: 1em;
+}
+
+.divisore {
+  margin: 0px;
 }
 

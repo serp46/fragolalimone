@@ -19,10 +19,33 @@
     
         {% block nav %}
             <nav class="navbar">
-                <ul class="navigation">
-                    <li class="left"><a type="button" id="modal_trigger" data-target="#modal" data-toggle="modal" href="/login" class="btn">Login</a></li>
-                    <li class="logo"><a href="{{ url('gelato_homepage') }}"><img src="img/pittogramma.png" alt="logo"></a></li>
+                
+              <ul class="navigation">
+
+                  {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    
+                    <li class="left"><a href="{{ path('gelato_profilo_utente') }}">Ciao {{ app.user.username }} - </a></li>
+
+                    <li class="left"><a href="{{ path('fos_user_security_logout') }}">Logout</a></li>
+
+                    <li class="logo"><a href="{{ url('gelato_homepage') }}"><img src="{{ asset('img/pittogramma.png') }}" alt="logo"></a></li>
+
                     <li class="right"><a href="{{ url('gelato_contatti') }}">Contatti</a></li>
+
+                {% else %}
+
+                
+                    <li class="left"><a type="button" href="/login" class="btn">Login -</a></li>
+
+                    <li class="left"><a type="button" href="{{ url('fos_user_registration_register') }}" class="btn">Registrati</a></li>
+
+                    <li class="logo"><a href="{{ url('gelato_homepage') }}"><img src="img/pittogramma.png" alt="logo"></a></li>
+
+                    <li class="right"><a href="{{ url('gelato_contatti') }}">Contatti</a></li>
+               
+                
+                {% endif %}
+
                 </ul>
             </nav>
         {% endblock %}
